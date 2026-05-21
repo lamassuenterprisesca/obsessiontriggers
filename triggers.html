@@ -210,9 +210,10 @@
       box-shadow:0 12px 30px rgba(0,0,0,.06);
       overflow:hidden;
     }
-    .testi-inner{display:grid;grid-template-columns:150px 1fr;gap:0;align-items:stretch}
+    .testi-inner{display:grid;grid-template-columns:220px 1fr;gap:0;align-items:stretch}
+    @media(min-width:701px){.testi{max-width:100%;}.testi-photo{min-height:100%;}.testi-photo img{object-fit:contain;background:#f7f7f7;padding:0}}
     .testi-photo{background:#f2f2f2;min-height:190px;display:flex;align-items:center;justify-content:center;border-right:1px solid #eee}
-    .testi-photo img{width:100%;height:100%;object-fit:cover}
+    .testi-photo img{width:100%;height:100%;object-fit:cover;object-position:center center}
     .testi-copy{padding:25px 28px}
     .testi-name{font-family:Arial,sans-serif;font-size:14px;color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
     .testi blockquote{margin:0;font-size:19px;line-height:1.62;color:#222}
@@ -277,6 +278,9 @@
       font-weight:900;
       box-shadow:inset 0 0 0 1px rgba(255,255,255,.6),0 16px 36px rgba(0,0,0,.06);
     }
+
+    .mockup-slot.has-image{border:0;background:transparent;padding:0;min-height:0;box-shadow:none;display:block}
+    .mockup-slot.has-image img{width:100%;height:auto;max-height:420px;object-fit:contain;margin:0 auto;filter:drop-shadow(0 18px 28px rgba(0,0,0,.14))}
     .full-offer-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;align-items:center}
     @media(max-width:760px){.full-offer-grid{grid-template-columns:1fr}.mockup-slot{min-height:210px}}
     .price-row{display:flex;align-items:flex-end;justify-content:center;gap:18px;margin:8px 0 28px;flex-wrap:wrap}
@@ -368,7 +372,7 @@
     <section class="copy-section">
       <div class="testi">
         <div class="testi-inner">
-          <div class="testi-photo"><img src="/images/testi-bill-g.jpg" alt="Bill G testimonial"></div>
+          <div class="testi-photo"><img src="/cb/lander/images/testi-bill-g.jpg" alt="Bill G testimonial"></div>
           <div class="testi-copy">
             <div class="testi-name">Bill G from Tampa Florida</div>
             <blockquote>“Holy sh*t Tim! I don’t think I can take it anymore, and my dick definitely can’t…<br><br>I’m getting a new date every week with perfect 8’s and 9’s… All victoria secret models (seems to be my type haha).<br><br>Yet, still this works like gangbusters on normal girls too.<br><br>1 night out with my buddies. I picked up two perfect 8’s and had first threesome (can check that one off the list, WOHOOO!!)<br><br>You’re the best,<br>Thanks so much.”</blockquote>
@@ -378,7 +382,7 @@
 
       <div class="testi">
         <div class="testi-inner">
-          <div class="testi-photo"><img src="/images/testi-eric-c.jpg" alt="Eric C testimonial"></div>
+          <div class="testi-photo"><img src="/cb/lander/images/testi-eric-c.jpg" alt="Eric C testimonial"></div>
           <div class="testi-copy">
             <div class="testi-name">Eric C. from Huston Texas</div>
             <blockquote>“Honestly man, after my last breakup, I was just looking to get back into the game…<br><br>I’m not a natural by any means, and to even get a girlfriend, I had to put in 10x more effort than most guys…<br><br>The worst part is sometimes I’d meet women that I ACTUALLY liked, down to earth girls, the rare kind you see every once in a while… and I’d fumble or I’d stumble over my words…<br><br>So after a few days, I’m overwhelmed at how well the triggers are working for me. I used them to resurrect both of the girls who’d gone cold, and I saw one of them for dinner last night.<br><br>In the past I would have worried that if I rebuffed a girl she’d be gone, but she has been messaging me all day today! She tells me that “something has changed” in me but honestly, the only thing different is that I’m using the triggers on her.<br><br>This honestly feels weird and like it should be illegal, but after two years of being in a dry spell, I’ll take it.”</blockquote>
@@ -399,7 +403,7 @@
       <h2 class="story-headline">Wait Till You Hear How I Discovered These Powerful Obsession Triggers</h2>
       <div class="image-text-row">
         <div class="image-block">
-          <img src="/images/ben-bianca-apartment.jpg" alt="Ben and Bianca">
+          <img src="/cb/lander/images/ben-bianca-apartment.jpg" alt="Ben and Bianca">
         </div>
         <div class="image-text-copy">
           <p><strong><em>My name is Ben, and that’s me with my new girlfriend.</em></strong></p>
@@ -413,7 +417,7 @@
 
       <div class="image-split">
         <div class="image-block">
-          <img src="/images/photo-studio.jpg" alt="Photo studio story">
+          <img src="/cb/lander/images/photo-studio.jpg" alt="Photo studio story">
         </div>
         <div>
           <p>You see, I’m a <strong><em>professional photographer</em></strong> and I take photos of beautiful women for a living.</p>
@@ -428,7 +432,7 @@
           <p>She would always walk around the apartment in almost nothing… and it used to <span class="u-red">drive me crazy.</span></p>
         </div>
         <div class="image-block">
-          <img src="/images/bianca-apartment.jpg" alt="Bianca apartment story">
+          <img src="/cb/lander/images/bianca-apartment.jpg" alt="Bianca apartment story">
         </div>
       </div>
       <p>I tried every trick in the book to get with her, but she would always refuse, telling me that she “didn’t want to ruin our friendship.”</p>
@@ -441,7 +445,7 @@
       <p>This was pretty common, until one morning, everything changed…</p>
       <div class="image-split">
         <div class="image-block">
-          <img src="/images/mystery-guy.jpg" alt="Mystery guy story">
+          <img src="/cb/lander/images/mystery-guy.jpg" alt="Mystery guy story">
         </div>
         <div>
           <p>It was early on a Sunday and I was sorting Bianca’s laundry...</p>
@@ -500,7 +504,7 @@
 
       <div class="image-split">
         <div class="image-block">
-          <img src="/images/kindle-research.jpg" alt="Kindle research">
+          <img src="/cb/lander/images/kindle-research.jpg" alt="Kindle research">
         </div>
         <div>
           <p>He was right, I’d seen Bianca read many of these books <strong>ALL the time</strong>.</p>
@@ -559,7 +563,7 @@
           <p><span class="hotline">“say this when you want to turn her on”</span></p>
         </div>
         <div class="image-block">
-          <img src="/images/spreadsheet.jpg" alt="Trigger spreadsheet">
+          <img src="/cb/lander/images/spreadsheet.jpg" alt="Trigger spreadsheet">
         </div>
       </div>
 
@@ -595,7 +599,7 @@
       <p>Yet, she picked <strong><u>ME</u></strong> out of the <em>thousands</em> of options she had.</p>
       <div class="image-split">
         <div class="image-block">
-          <img src="/images/instagram-model.jpg" alt="Instagram model test">
+          <img src="/cb/lander/images/instagram-model.jpg" alt="Instagram model test">
         </div>
         <div>
           <p>While cuddling in bed after that night, she asked me...</p>
@@ -655,7 +659,7 @@
           <p>All from the comfort of your own home.</p>
         </div>
         <div class="image-block">
-          <img src="/images/private-members.jpg" alt="Private members area">
+          <img src="/cb/lander/images/private-members.jpg" alt="Private members area">
         </div>
       </div>
       <p>The Obsessions Triggers isn’t designed to give you information overload, nor did we create it to jam your head full of fluff and theory.</p>
@@ -673,7 +677,7 @@
     <section class="copy-section">
       <div class="testi">
         <div class="testi-inner">
-          <div class="testi-photo"><img src="/images/testi-johnny.jpg" alt="Johnny testimonial"></div>
+          <div class="testi-photo"><img src="/cb/lander/images/testi-johnny.jpg" alt="Johnny testimonial"></div>
           <div class="testi-copy">
             <div class="testi-name">Johnny from Tampa Florida</div>
             <blockquote>“My woman’s name is Sandy, and I’ve been wanting her for years. We work together, though, and I never thought I’d be able to transition from work friends to something more. The very next time I saw Sandy, I started talking to her, just like normal. Except, this time, I used the whirlwind romance phrase. Everything I said just HIT.”</blockquote>
@@ -682,7 +686,7 @@
       </div>
       <div class="testi">
         <div class="testi-inner">
-          <div class="testi-photo"><img src="/images/testi-james-miller.jpg" alt="James Miller testimonial"></div>
+          <div class="testi-photo"><img src="/cb/lander/images/testi-james-miller.jpg" alt="James Miller testimonial"></div>
           <div class="testi-copy">
             <div class="testi-name">James Miller from Dallas Texas</div>
             <blockquote>“I am a young guy, so at this point in my life It's awesome to find stuff like this that can help guide me in the right direction. That been said, I appreciate your efforts and intentions coming from a guy that needed this right now, so thank you.”</blockquote>
@@ -691,7 +695,7 @@
       </div>
       <div class="testi">
         <div class="testi-inner">
-          <div class="testi-photo"><img src="/images/testi-danny-d.jpg" alt="Danny D testimonial"></div>
+          <div class="testi-photo"><img src="/cb/lander/images/testi-danny-d.jpg" alt="Danny D testimonial"></div>
           <div class="testi-copy">
             <div class="testi-name">Danny D from Boise Idaho</div>
             <blockquote>“I use the Day 3 Rejection Annihilator Material to OWN women whenever I go up to talk to them, and now I know that even if they seem like a bitch at first, I know exactly what to do to get them to open up to me.”</blockquote>
@@ -756,15 +760,7 @@
         </div>
         <div class="offer-body">
           <div class="full-offer-grid" style="margin-bottom:28px">
-            <div class="mockup-slot">
-              <div>
-                <strong style="display:block;font-size:20px;margin-bottom:10px;color:#5f000a">PRODUCT MOCKUP</strong>
-                <div style="font-size:16px;line-height:1.6">
-                  Place image here:<br>
-                  <span style="color:#8b000f">/images/ot-final-mockup.jpg</span>
-                </div>
-              </div>
-            </div>
+            <div class="mockup-slot has-image"><img src="/cb/lander/images/ot-final-mockup.jpg" alt="Obsessions Triggers product mockup"></div>
             <div>
           <div class="price-row">
             <span class="old-price">$77</span>
@@ -828,7 +824,7 @@
         <p>This is a TELL-ALL report by Daniel on how he handles his harem of women on a day to day basis…</p>
         <div class="testi" style="margin-bottom:0">
           <div class="testi-inner">
-            <div class="testi-photo"><img src="/images/testi-jon-miami.jpg" alt="Jon from Miami"></div>
+            <div class="testi-photo"><img src="/cb/lander/images/testi-jon-miami.jpg" alt="Jon from Miami"></div>
             <div class="testi-copy">
               <div class="testi-name">Jon from Miami</div>
               <blockquote>“Just 3 months ago I was a virgin, and the idea of having a hot 10 be my girlfriend, let alone 2 of them… It was out of the picture…Using Obsessions Triggers I’d already started sleeping with a new woman every week… But Daniel’s PUSSY MULTIPLIER took things to the next level…”</blockquote>
@@ -855,14 +851,7 @@
         </div>
         <div class="offer-body">
           <div class="full-offer-grid">
-            <div class="mockup-slot">
-              <div>
-                <strong style="display:block;font-size:20px;margin-bottom:10px;color:#5f000a"></strong>
-                <div style="font-size:16px;line-height:1.6">
-                  <span style="color:#8b000f">/images/ot-final-mockup.jpg</span>
-                </div>
-              </div>
-            </div>
+            <div class="mockup-slot has-image"><img src="/cb/lander/images/ot-final-mockup.jpg" alt="Obsessions Triggers product mockup"></div>
             <div>
               <div class="price-row">
                 <span class="old-price">$77</span>
@@ -903,7 +892,7 @@
       <p>Simply click the button that's below now and secure your copy of Obsessions Triggers...</p>
       <p>Within minutes, you’ll get instant access to the private members platform.</p>
       <div class="image-block">
-        <img src="/images/members-platform-preview.jpg" alt="Members platform preview">
+        <img src="/cb/lander/images/members-platform-preview.jpg" alt="Members platform preview">
       </div>
     </section>
 
@@ -930,14 +919,7 @@
         </div>
         <div class="offer-body">
           <div class="full-offer-grid">
-            <div class="mockup-slot">
-              <div>
-                <strong style="display:block;font-size:20px;margin-bottom:10px;color:#5f000a">FINAL PRODUCT MOCKUP</strong>
-                <div style="font-size:16px;line-height:1.6">
-                  <span style="color:#8b000f">/images/ot-final-mockup.jpg</span>
-                </div>
-              </div>
-            </div>
+            <div class="mockup-slot has-image"><img src="/cb/lander/images/ot-final-mockup.jpg" alt="Obsessions Triggers product mockup"></div>
             <div>
               <div class="price-row">
                 <span class="old-price">$77</span>
@@ -960,5 +942,19 @@
       <a href="#" class="final-link-cta">Click Here To Get Started Today</a>
     </section>
   </main>
+
+  <script>
+    // Image path fallback: primary folder is /cb/lander/images/, fallback supports older /images/ uploads.
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('img[src^="/cb/lander/images/"]').forEach(function(img){
+        img.addEventListener('error', function(){
+          if (!img.dataset.fallbackTried) {
+            img.dataset.fallbackTried = '1';
+            img.src = img.src.replace('/cb/lander/images/', '/images/');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
