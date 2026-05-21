@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obsession Triggers - Text Sales Page</title>
+  <style>
+    :root{
+      --red:#8b000f;
+      --red-dark:#5f000a;
+      --red-soft:#fff2f3;
+      --gold:#b8860b;
+      --black:#111;
+      --text:#1d1d1f;
+      --muted:#666;
+      --line:#ececec;
+      --paper:#ffffff;
+      --cream:#fffaf3;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Georgia, 'Times New Roman', serif;
+      background:#fff;
+      color:var(--text);
+      line-height:1.86;
+      font-size:22px;
+    }
+    img{max-width:100%;display:block}
+    
+    
+    .warning-box{
+      margin:38px 0;
+      background:linear-gradient(180deg,#fff8f8,#fff2f2);
+      border:1px solid #f0cfd3;
+      border-left:6px solid var(--red);
+      border-radius:18px;
+      padding:24px;
+    }
+    .warning-box strong{color:var(--red-dark)}
+    .top-strip{
+      background:var(--black);
+      color:#fff;
+      text-align:center;
+      padding:11px 14px;
+      font-family:Arial, sans-serif;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .page{max-width:820px;margin:0 auto;padding:0 22px 80px}
+    .hero{padding:48px 0 28px;border-bottom:1px solid var(--line)}
+    .eyebrow{
+      font-family:Arial, sans-serif;
+      color:var(--red);
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:800;
+      margin-bottom:14px;
+    }
+    h1{
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:46px;
+      line-height:1.05;
+      margin:0 0 16px;
+      letter-spacing:-.035em;
+      color:var(--red-dark);
+      font-weight:800;
+    }
+    .deck{
+      font-size:23px;
+      line-height:1.45;
+      color:#262626;
+      margin:0;
+      border-left:5px solid var(--red);
+      padding-left:18px;
+      font-style:italic;
+    }
+    section{padding:30px 0}
+    p{margin:0 0 30px}
+    .copy-section p{max-width:720px}
+    .breath{margin-top:42px}
+    strong{font-weight:900;color:#090909}
+    .hotline{
+      display:inline;
+      background:linear-gradient(transparent 58%, #ffd5da 0);
+      color:#101010;
+      font-weight:900;
+    }
+    .red-bold{color:var(--red);font-weight:900}
+    .u-red{color:var(--red);font-weight:900;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+    .image-split{
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:28px;
+      align-items:center;
+      margin:40px 0;
+    }
+    .image-split.reverse{grid-template-columns:1.1fr .9fr}
+    .placeholder-card{
+      border:2px dashed #d9b25d;
+      background:#fffaf0;
+      border-radius:16px;
+      min-height:240px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:26px;
+      font-family:Arial,sans-serif;
+      color:#6b4a00;
+      font-size:15px;
+      line-height:1.45;
+      font-weight:900;
+    }
+    .final-link-cta{
+      display:block;
+      text-align:center;
+      color:var(--red-dark);
+      font-family:Arial,sans-serif;
+      font-size:24px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      text-decoration:underline;
+      text-decoration-thickness:3px;
+      text-underline-offset:7px;
+      margin:34px auto 10px;
+    }
+    @media(max-width:760px){.image-split,.image-split.reverse{grid-template-columns:1fr}}
+    .lead p:first-child{font-size:23px;color:#111}
+    .red{color:var(--red);font-weight:800}
+    .mark{background:linear-gradient(transparent 62%, #ffd9dd 0);font-weight:800;color:#111}
+    .pull{
+      margin:48px 0;
+      padding:25px 26px;
+      border:1px solid #ead5d7;
+      background:var(--red-soft);
+      border-left:7px solid var(--red);
+      font-size:25px;
+      line-height:1.35;
+      font-weight:800;
+      color:#111;
+      letter-spacing:-.015em;
+    }
+    .attention-line{
+      display:block;
+      font-family:Arial,sans-serif;
+      color:var(--red);
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:17px;
+      margin:38px 0 26px;
+      text-align:left;
+    }
+    .story-headline{
+      font-size:40px;
+      line-height:1.08;
+      letter-spacing:-.035em;
+      font-weight:900;
+      color:var(--red-dark);
+      margin:58px 0 28px;
+    }
+    .subhead{
+      margin:42px 0 22px;
+      font-size:32px;
+      line-height:1.15;
+      color:var(--red-dark);
+      font-weight:800;
+      letter-spacing:-.025em;
+      text-align:left;
+    }
+    .minihead{
+      margin:30px 0 14px;
+      font-family:Arial, sans-serif;
+      color:var(--red);
+      text-transform:uppercase;
+      font-size:15px;
+      letter-spacing:.08em;
+      font-weight:900;
+    }
+    .image-text-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:center;
+      margin:38px 0 34px;
+    }
+    .image-text-row .image-block{margin:0}
+    .image-text-copy p:last-child{margin-bottom:0}
+    @media(max-width:760px){.image-text-row{grid-template-columns:1fr;gap:18px}}
+    .image-block{
+      margin:34px 0;
+      border:1px solid #e8e8e8;
+      border-radius:14px;
+      overflow:hidden;
+      background:#fafafa;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+    }
+    .image-block img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee}
+    .caption{font-family:Arial,sans-serif;font-size:13px;line-height:1.4;color:#777;padding:12px 14px;text-align:center}
+    .testi{
+      margin:32px 0;
+      border:1px solid #eee;
+      border-radius:16px;
+      background:#fff;
+      box-shadow:0 12px 30px rgba(0,0,0,.06);
+      overflow:hidden;
+    }
+    .testi-inner{display:grid;grid-template-columns:150px 1fr;gap:0;align-items:stretch}
+    .testi-photo{background:#f2f2f2;min-height:190px;display:flex;align-items:center;justify-content:center;border-right:1px solid #eee}
+    .testi-photo img{width:100%;height:100%;object-fit:cover}
+    .testi-copy{padding:25px 28px}
+    .testi-name{font-family:Arial,sans-serif;font-size:14px;color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .testi blockquote{margin:0;font-size:19px;line-height:1.62;color:#222}
+    .section-divider{height:1px;background:var(--line);margin:34px 0}
+    .bullets{margin:18px 0 28px;padding:0;list-style:none}
+    .bullets li{position:relative;padding-left:31px;margin:14px 0}
+    .bullets li:before{content:'✓';position:absolute;left:0;top:0;color:var(--red);font-weight:900}
+    .offer-drop{
+      position:relative;
+      margin:58px 0 44px;
+      border:2px solid #5e0009;
+      border-radius:26px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#fffdf9 0%,#fff7f7 100%);
+      box-shadow:0 28px 70px rgba(139,0,15,.18);
+    }
+    .offer-drop:before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top right, rgba(184,134,11,.14), transparent 34%);
+      pointer-events:none;
+    }
+    .offer-top{
+      background:linear-gradient(135deg,#3a0005 0%,#5f000a 38%,#890011 100%);
+      color:#fff;
+      text-align:center;
+      padding:30px 24px 28px;
+      position:relative;
+      overflow:hidden;
+    }
+    .offer-top:after{
+      content:'';
+      position:absolute;
+      width:240px;
+      height:240px;
+      background:rgba(255,255,255,.05);
+      border-radius:50%;
+      right:-80px;
+      top:-120px;
+    }
+    .offer-top .kicker{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:900;color:#ffd6d9;margin-bottom:8px}
+    .offer-top h2{margin:0;font-size:42px;line-height:1.02;letter-spacing:-.045em;color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.22)}
+    .offer-body{padding:42px 34px 38px;text-align:center;position:relative}
+    .mystery-stack{margin:22px 0 6px;border:1px solid #f0d6d9;border-radius:14px;background:#fff7f8;padding:18px;font-family:Arial,sans-serif;text-align:left}
+    .mystery-row{display:flex;gap:12px;align-items:flex-start;border-bottom:1px dashed #eccbd0;padding:12px 0;font-size:16px;line-height:1.45}
+    .mystery-row:last-child{border-bottom:0}
+    .mystery-dot{width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex:0 0 24px}
+    .mockup-slot{
+      border:2px dashed rgba(184,134,11,.55);
+      background:linear-gradient(180deg,#fffefb,#fff5e8);
+      border-radius:24px;
+      min-height:340px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:32px;
+      margin:0;
+      font-family:Arial,sans-serif;
+      color:#7a5a11;
+      font-weight:900;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.6),0 16px 36px rgba(0,0,0,.06);
+    }
+    .full-offer-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;align-items:center}
+    @media(max-width:760px){.full-offer-grid{grid-template-columns:1fr}.mockup-slot{min-height:210px}}
+    .price-row{display:flex;align-items:flex-end;justify-content:center;gap:18px;margin:8px 0 28px;flex-wrap:wrap}
+    .old-price{text-decoration:line-through;color:#888;font-size:30px;font-weight:700}
+    .new-price{font-size:96px;line-height:.82;font-weight:900;color:#7f000f;letter-spacing:-.07em;text-shadow:0 6px 18px rgba(139,0,15,.12)}
+    .value-stack{
+      border:1px solid #eddcdf;
+      border-radius:18px;
+      margin:24px 0 28px;
+      padding:12px 20px;
+      text-align:left;
+      background:#fff;
+      box-shadow:0 10px 24px rgba(0,0,0,.04);
+    }
+    .value-item{display:flex;justify-content:space-between;gap:14px;font-family:Arial,sans-serif;font-size:16px;border-bottom:1px dashed #eee;padding:10px 0}
+    .value-item:last-child{border-bottom:0}
+    .cta{
+      display:inline-block;
+      background:linear-gradient(180deg,#c2001a,#7a000d);
+      color:#fff;
+      text-decoration:none;
+      font-family:Arial,sans-serif;
+      font-size:24px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+      padding:22px 42px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.2);
+      box-shadow:0 10px 0 #4a0007,0 24px 44px rgba(139,0,15,.28);
+      margin:18px auto 14px;
+      transition:transform .15s ease;
+    }
+    .cta:hover{transform:translateY(2px)}
+    .secure{font-family:Arial,sans-serif;font-size:13px;color:#666;margin-top:10px}
+    
+    .bonus{border:1px solid #eee;border-radius:16px;padding:24px;margin:22px 0;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.04)}
+    .bonus-num{font-family:Arial,sans-serif;color:var(--gold);font-size:13px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;margin-bottom:8px}
+    .bonus h3{margin:0 0 12px;color:var(--red-dark);font-size:28px;line-height:1.15}
+    .guarantee{background:var(--cream);border:1px solid #eadfcf;border-radius:18px;padding:30px;margin:38px 0}
+    .final-choice{background:#111;color:#fff;border-radius:18px;padding:32px;margin:38px 0}
+    .final-choice h2{color:#fff;margin-top:0;font-size:34px;line-height:1.12}
+    .final-choice p{color:#f1f1f1}
+    .center{text-align:center}
+    @media(max-width:700px){
+      body{font-size:19px;line-height:1.68}
+      .page{padding:0 18px 60px}
+      h1{font-size:37px}
+      .deck{font-size:20px}
+      .subhead{font-size:28px}
+      .pull{font-size:22px;padding:22px 20px}
+      .testi-inner{grid-template-columns:1fr}
+      .testi-photo{height:230px;border-right:0;border-bottom:1px solid #eee}
+      .testi-copy{padding:22px 20px}
+      .new-price{font-size:58px}
+      .cta{font-size:19px;padding:17px 24px;width:100%;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip">Private Report • Read Carefully Before This Page Disappears</div>
+  
+  <main class="page">
+    <header class="hero">
+      
+        
+      </div>
+      <div class="eyebrow">Revealed</div>
+      <h1>3 Innocent Words That Makes Any Women Putty In Your Hand</h1>
+      <p class="deck">“Limited Release: Never-Seen Before Seduction Phrases SO Powerful That It Should Probably Definitely Be Illegal!”</p>
+    </header>
+
+    <section class="lead copy-section">
+      <p>Did you know there’s <span class="hotline">3 innocent words</span> you can use on ANY women to spark instant attraction and arousal, making her <span class="red-bold">downright addicted to you</span>.</p>
+      <p>These “obsession triggers” are evolutionarily wired into every woman's subconscious over thousands of years…</p>
+      <p>And when “triggered” in the right order, <span class="hotline">it flips a switch in her subconscious</span> that makes her practically lose control and begin to act on her deepest sexual desires…</p>
+      <p>Thanks to this powerful seduction technology regular guys are easily pulling girls leagues ahead of them that most guys can’t even dream of.</p>
+      <ul class="bullets">
+        <li>You’ll find 9’s and 10’s CRAVE YOU… pursuing your cock, and your approval, like laser-guided missiles locked on target.</li>
+        <li>And now, after months of anticipation and excitement, 500 seats to this astonishing new seduction technology are being released, as you read these very words.</li>
+      </ul>
+      <p class="breath">So if you’re <strong>SERIOUS</strong> about banging perfect 10’s, and being <span class="red-bold">“THAT GUY”</span> who always has total and complete control over his dating life then read THIS very closely…</p>
+      <span class="attention-line">Pay Close Attention To What Happens Next...</span>
+      <p>Because in just a moment I’m going to show you how YOU can use these ”3 Innocent Words” to trigger uncontrollable feelings of obsession in any women you want.</p>
+      <span class="attention-line">Stick Around — Because This Is Where Things Start Getting Crazy.</span>
+      <p>But first, let me show you what the few guys who have been using these 3 words are saying.</p>
+    </section>
+
+    <section class="copy-section">
+      <div class="testi">
+        <div class="testi-inner">
+          <div class="testi-photo"><img src="/images/testi-bill-g.jpg" alt="Bill G testimonial"></div>
+          <div class="testi-copy">
+            <div class="testi-name">Bill G from Tampa Florida</div>
+            <blockquote>“Holy sh*t Tim! I don’t think I can take it anymore, and my dick definitely can’t…<br><br>I’m getting a new date every week with perfect 8’s and 9’s… All victoria secret models (seems to be my type haha).<br><br>Yet, still this works like gangbusters on normal girls too.<br><br>1 night out with my buddies. I picked up two perfect 8’s and had first threesome (can check that one off the list, WOHOOO!!)<br><br>You’re the best,<br>Thanks so much.”</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi">
+        <div class="testi-inner">
+          <div class="testi-photo"><img src="/images/testi-eric-c.jpg" alt="Eric C testimonial"></div>
+          <div class="testi-copy">
+            <div class="testi-name">Eric C. from Huston Texas</div>
+            <blockquote>“Honestly man, after my last breakup, I was just looking to get back into the game…<br><br>I’m not a natural by any means, and to even get a girlfriend, I had to put in 10x more effort than most guys…<br><br>The worst part is sometimes I’d meet women that I ACTUALLY liked, down to earth girls, the rare kind you see every once in a while… and I’d fumble or I’d stumble over my words…<br><br>So after a few days, I’m overwhelmed at how well the triggers are working for me. I used them to resurrect both of the girls who’d gone cold, and I saw one of them for dinner last night.<br><br>In the past I would have worried that if I rebuffed a girl she’d be gone, but she has been messaging me all day today! She tells me that “something has changed” in me but honestly, the only thing different is that I’m using the triggers on her.<br><br>This honestly feels weird and like it should be illegal, but after two years of being in a dry spell, I’ll take it.”</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <p>There’s many more where those came from and they’re just a few of the reasons that you should at least listen to me.</p>
+      <div class="warning-box">
+        <strong>WARNING:</strong> Once you understand how these triggers work, you’ll start noticing women reacting to you in ways you’ve never experienced before.
+      </div>
+      <p>Because Men like us, we shouldn't be able to get these kind of results…</p>
+      <p><span class="hotline">Men like us? We’re always behind.</span></p>
+      <p>But not anymore, this flips the tables in our favours in ways you can’t imagine and if you thought these guys had some crazy experiences…</p>
+    </section>
+
+    <section class="copy-section">
+      <h2 class="story-headline">Wait Till You Hear How I Discovered These Powerful Obsession Triggers</h2>
+      <div class="image-text-row">
+        <div class="image-block">
+          <img src="/images/ben-bianca-apartment.jpg" alt="Ben and Bianca">
+        </div>
+        <div class="image-text-copy">
+          <p><strong><em>My name is Ben, and that’s me with my new girlfriend.</em></strong></p>
+          <p>She’s <span class="hotline">in love with me</span>…</p>
+          <p>Which is weird to say because up until a few months ago––<span class="red-bold"><strong>women hated me.</strong></span></p>
+        </div>
+      </div>
+      <p><strong><u>Get this:</u></strong> I’m in my late 30s, <em>slightly balding</em> and about about <strong>30 pounds overweight</strong>… I’ve been told I look like the kind of guy who would drive a windowless van around a high school asking people if they like ice cream.</p>
+      <p>And up until recently, the only time I’d ever get some action was if I paid for it.</p>
+      <p>And maybe all that wouldn’t have been so bad if I wasn’t constantly surrounded by <strong>gorgeous women</strong> who <span class="u-red">refused to be with me...</span></p>
+
+      <div class="image-split">
+        <div class="image-block">
+          <img src="/images/photo-studio.jpg" alt="Photo studio story">
+        </div>
+        <div>
+          <p>You see, I’m a <strong><em>professional photographer</em></strong> and I take photos of beautiful women for a living.</p>
+          <p>Every day <em>(and night)</em> I see girls with <span class="hotline">perfect bodies designed in labs</span> prance around in almost nothing.</p>
+        </div>
+      </div>
+
+      <p><strong>And that’s where the torture started...</strong></p>
+      <div class="image-split reverse">
+        <div>
+          <p>In fact, my now girlfriend <strong>(Bianca)</strong>, was my roommate and an ex-client of mine.</p>
+          <p>She would always walk around the apartment in almost nothing… and it used to <span class="u-red">drive me crazy.</span></p>
+        </div>
+        <div class="image-block">
+          <img src="/images/bianca-apartment.jpg" alt="Bianca apartment story">
+        </div>
+      </div>
+      <p>I tried every trick in the book to get with her, but she would always refuse, telling me that she “didn’t want to ruin our friendship.”</p>
+      <p>Oh, how much that would kill me every time.</p>
+      <p>What’s worse is when I did her laundry (she didn’t know how to use the machine). I would find different guys’ cream-stained underwear mixed with her panties. It was torture.</p>
+      <p>And they were always the type of guys I am not:</p>
+      <p><strong>Tall.</strong></p>
+      <p><strong>Rich.</strong></p>
+      <p><span class="u-red">Pulling up in supercars.</span></p>
+      <p>This was pretty common, until one morning, everything changed…</p>
+      <div class="image-split">
+        <div class="image-block">
+          <img src="/images/mystery-guy.jpg" alt="Mystery guy story">
+        </div>
+        <div>
+          <p>It was early on a Sunday and I was sorting Bianca’s laundry...</p>
+          <p>Then out of her room walked <span class="u-red">this guy</span>… who looked nothing like the guys she usually dates.</p>
+        </div>
+      </div>
+      <p>In fact, he looked just like me. He grabbed an apple from the fruit bowl, tossed his undies into the pile I was sorting, winked at me and walked out of the apartment.</p>
+      <p><span class="hotline">I was stunned.</span> How could <strong><u>that guy</u></strong> be with her?!</p>
+      <p>Then Bianca stumbled out, half-dressed, smiling. She looked at me and started laughing.</p>
+      <p><span class="mark">“I know what it looks like…but he was just DIFFERENT.. Like something about him just turns me on… and… It just happened”</span></p>
+      <p><strong><u>Why couldn’t it “just happen to me?”</u></strong></p>
+    </section>
+
+    <section class="copy-section">
+      <p>Like seriously, this guy was a real life version of ratatouille… but asian.</p>
+      <p>Usually I would have been upset, but instead, I decided to get answers. I needed to know what the heck this guy did to get Bianca…</p>
+      <p>So I waited until Bianca was in the shower, and started going through her phone. I sent a text to the last number that called her.</p>
+      <div class="pull">“I need u NOW. Come…quick! Xoxo”</div>
+      <p>I felt like such an asshole, but I HAD to know his secret.</p>
+      <p>Five minutes later he responded: “:) Already? Give me 2 hours. You’ll just have to wait…”</p>
+      <p>I deleted the messages and put Bianca’s phone back. 30 minutes later, she took off for work.</p>
+      <p>One and a half hours later, I heard a knock on the door.</p>
+      <p>When I opened the door, the guy from earlier squinted his eyes at me curiously.</p>
+      <p>“Hmmm… Where’s Bianca?”</p>
+      <p>And I just confessed right then and there…</p>
+      <p>“Listen man, it was me who sent you the message…I just need to know your secret, man…I’m begging you! It’s been far too long”</p>
+      <p>He first looked like he wanted to punch me in the face. But then…he just burst out laughing..</p>
+      <p>“Ya know…when I saw you there this morning, doing her laundry, I felt really bad for you. No man should ever have to do that…let’s talk.”</p>
+      <p>He name was Daniel, and he told me how he’d had awful social anxiety for most of his life, and had been painfully humiliated by a few women, and even cheated on by two girlfriends.</p>
+      <p>He said that it got so bad that he devoted his life to understanding women, because he was a family guy at heart, and he wanted to find the right girl to settle down with.</p>
+      <p>I felt like I was talking to a guy who knew EXACTLY what I’d been through… And better yet, he had exactly what I wanted.</p>
+      <p>He spent <strong>five years</strong> dating beautiful women and having fun, and eventually got married to girl who, in his own words, <span class="hotline">“is the best woman I’ve ever met, and probably way too hot for me.”</span></p>
+      <h2 class="subhead">He Discovered The “Holy Grail” Of Seduction”</h2>
+      <p>The exact lines and phrases to get women to become completely obsessed with you and fall in love with you.</p>
+      <p>He called them “Obsession Triggers.”</p>
+      <p>And he walked me through it.</p>
+      <p><strong>Daniel had this stuff down to a science…</strong></p>
+      <p>From meeting her, to messaging her, to getting her so obsessed with you that <span class="hotline">SHE ASKS to be YOUR girlfriend.</span></p>
+      <p>This was perfect for me because something I always sucked at was how to make a girl pursue me… it felt like I was always working for her… Like I was doing all the hard work.</p>
+      <p>But Daniel showed me the science behind why using these "innocent phrases” or “obsession triggers” completely flips the script and makes her chase you.</p>
+      <p><span class="hotline"><strong><u>You become the prize.</u></strong></span></p>
+      <p>Now I have more dates than I can even go on, and I never get rejected because I never have to ask the girl out.</p>
+      <p>She does 90% of the talking. It’s pretty awesome!</p>
+    </section>
+
+    <section class="copy-section">
+      <h2 class="subhead">“And Where Daniel Found These Obsession Phrases Is Even More Awesome”</h2>
+      <p>“Do you know how women like to read? ALOT?” He said.</p>
+      <p>I nodded.</p>
+      <p><strong>But have you ever noticed what they read?</strong></p>
+      <p>It was almost impossible for Daniel to get anywhere with women, and he was about to give up... until he read a strange article that changed his life forever.</p>
+      <p>Have you ever been in a bookstore and seen those small, thick books with ripped, shirtless dudes on the cover?</p>
+      <p>You know, those trashy sexual romance novels?</p>
+      <p>Well guess what. That’s called Literotica, and it’s basically female masturbation material.</p>
+      <p>In fact, I’d bet that almost every girl you know uses those books to get herself off.</p>
+
+      <div class="image-split">
+        <div class="image-block">
+          <img src="/images/kindle-research.jpg" alt="Kindle research">
+        </div>
+        <div>
+          <p>He was right, I’d seen Bianca read many of these books <strong>ALL the time</strong>.</p>
+          <p>I’d always found it odd.</p>
+          <p>But now, things were starting to <span class="u-red">make sense.</span></p>
+        </div>
+      </div>
+
+      <p>And just like how porn has some really freaky videos… Some of Literotica’s most popular stories have equally shocking and disgusting plots… Even weirder, the authors are women themselves.</p>
+      <p><strong>And Daniel kept digging...</strong></p>
+      <p>If you still don’t know what Daniel is talking about, we’ve all heard of that book Fifty Shades of Grey, That’s Literotica, and that book alone has sold over 100 million copies!</p>
+      <p>In fact, the author is now a multimillionaire because of it.</p>
+      <p>As Daniel discovered, these literotica books tapped into women's <strong>deepest, most primitive sexual desires</strong>…</p>
+      <p>And they get <strong><em><u>REALLY FUCKED UP…</u></em></strong></p>
+      <p>The ancient, biological programming that’s embedded inside her DNA, or what Daniel calls her “obsession story”.</p>
+      <p>It’s basically the same as us guys being attracted to women with big boobs and hourglass figures… our DNA programs us to want women who have these traits.</p>
+      <p>And just like you’d be damn near helpless to resist a Victoria’s Secret model who walked up to you at a bar, grabbed your package, and said “I want your dick, and I want it NOW…” a woman’s DNA commands her to fall in love with men who do and say certain things.</p>
+      <p>It doesn’t matter if the guys are super jacked bad boys, big fat dynamos, or slender, mysterious outcasts… there are LOTS of different leading men in Literotica… but what remains the same are the simple things they do and say that tap into the female “obsession story.”</p>
+      <p>And that’s why women spend as much money on literotica as men spend on pornography.</p>
+      <div class="pull">“Women Spend Nearly $1 Billion Dollars A Year On This Filthy Masturbation Material!”</div>
+    </section>
+
+    <section class="copy-section">
+      <p>Once Daniel discovered this, he turned into a “Mad Scientist of Literotica.”</p>
+      <p>He purchased <strong>dozens</strong> of the most popular literotica books.</p>
+      <p><span class="hotline">He read them until his eyes bled</span>, dug deep into every single story… until he finally connected all the dots.</p>
+      <p>And he ended up creating a step-by-step system on how to get a girlfriend using what he learned from Literotica.</p>
+      <p>He calls his system the Obsession Switch.</p>
+      <p>It’s literally the step-by-step way to tap into a woman’s obsession and make her fall in love with you…</p>
+      <p>And for the first time EVER he’s releasing his studies to the public.</p>
+      <p>You see, after being with hundreds of women, Daniel has FINALLY found the one and he’s getting ready to settle down… So he released his material for the first time ever… At first, in small chunks.</p>
+      <h2 class="subhead">“Guys Everywhere Were Finally Landing The Girls Of Their Dreams Using This System”</h2>
+      <p>Daniel received thousands of messages from men all over the world who bought his course, and who finally found themselves in happy relationships.</p>
+      <p>But as the course became more popular, controversy erupted.</p>
+      <p>Feminist groups took up arms against him… angry as a swarm of killer bees that Daniel would dare reveal anything dark or vulnerable about the “precious” female.</p>
+      <p>They claimed that Daniel and his guys were using a scientific breakthrough to take advantage of unsuspecting women.</p>
+      <p>They also state that because this seduction technology bypasses a woman's decision-making process, it's possible to implant anything you want, making a woman sexually addicted to you or cheat on her husband with you and THAT is a moral outrage.</p>
+      <p><span class="hotline">But Daniel REFUSED to settle.</span></p>
+      <p>And doubled down.</p>
+      <p><strong>He went ALL IN.</strong></p>
+      <h2 class="subhead">“You see, Daniel Left Out His Most Powerful Discovery...”</h2>
+      <p>...material so overwhelming that he felt a moral obligation to leave it out of his System.</p>
+      <p>You see, when Daniel purchased all of those literotica books, he didn’t walk into a bookstore and come out with a huge stack… Nope. He went onto Amazon.Com, and simply downloaded the top 100 or so directly on his Kindle.</p>
+      <p>Now here’s what’s interesting: when you read a book on an Amazon Kindle, you can “highlight” phrases and sentences.</p>
+      <p>But get this: Amazon keeps track of all of every single highlight that you, and every other reader of the book are making.</p>
+      <p>And if a certain phrase or sentence gets enough highlights, it becomes a “popular highlight” that shows up, with a little dotted line under it, for everyone who reads the book.</p>
+      <p>So while Daniel was reading these books, he kept track of all the popular highlights... And specifically, the popular words or phrases that the male characters in the books said.</p>
+      <div class="pull">“These Words Were Being Fed DIRECTLY From The Minds Of Women… Into Amazon’s Databases… And Directly Onto Daniel’s Kindle”</div>
+      <p>That’s right - Daniel discovered the Obsession Triggers from the exact words that women themselves had highlighted, in the most popular Literotica books.</p>
+      <p>But let’s be clear: it wasn’t just a simple line or two from Fifty Shades of Grey.</p>
+      <div class="image-split reverse">
+        <div>
+          <p>Daniel created a spreadsheet of <strong>thousands</strong> of these lines, putting them into categories like...</p>
+          <p><span class="hotline">“say this when you meet her”</span></p>
+          <p><span class="hotline">“say these when she’s not certain about you”</span></p>
+          <p><span class="hotline">“say this when you want to turn her on”</span></p>
+        </div>
+        <div class="image-block">
+          <img src="/images/spreadsheet.jpg" alt="Trigger spreadsheet">
+        </div>
+      </div>
+
+      <p><strong>Then he started testing them in the real world...</strong></p>
+
+      <p>He went through each category, because he was looking for patterns… Were there any exact words that were always highlighted? Or was there a common theme in all of the phrases?</p>
+      <p>Over the course of several months, he began to test them, and the results were scary.</p>
+      <h2 class="subhead">“I’ve Never Seen Women Get So Obsessed, So Fast”</h2>
+      <p>As Daniel told me on our first call, “I had to put them away man… it just felt too powerful, too manipulative.”</p>
+      <p>“Sure, I’d pull one out now and again when it was midnight at the bar and I just wanted to take a random hottie home, but on a girl I liked… no way man.”</p>
+      <p>“It didn’t feel right to me… using these Obsession Triggers was like controlling a puppet by its strings, and that just felt wrong when I really liked a girl. I’ve never seen women get so obsessed, so fast.”</p>
+      <p>Of course, when he told this to me, I had two thoughts.</p>
+      <p>The first was that this must be bullshit. I mean, it all made sense, but come on… did these triggers really exist?</p>
+      <p>And the second was that if they did exist, I would have absolutely NO problem using them… not with all the awful luck I’d had MY whole life.</p>
+      <p>My curiosity was blazing…</p>
+    </section>
+
+    <section class="copy-section">
+      <h2 class="subhead">“It Was Time To See How Well These Triggers Would Work For Me”</h2>
+      <p>An 8 approached me at the bar, said hello, I said hello back.</p>
+      <p>She asked where I was from and in my reply I dropped in two Obsession Triggers as best as I could remember them.</p>
+      <p>I think I was flinching, waiting for a rejection, but what do you know… she lit right up, and turned her whole body to face mine!</p>
+      <p>I decided to play it safe and not risk it, so I just got her number and told her I’d call.</p>
+      <p>But she was having nothing of it, she pulled me to the side and just started to make out with me.</p>
+      <p>And I don’t need to tell you where that night ended…</p>
+      <p>The next day, I woke up, and went to the Beach, feeling a little more confident this time around.</p>
+      <p>The girl I met later that night — <span class="hotline">a 9 by ANYONE’S standards</span> — got <strong>crazy hooked on me!</strong></p>
+      <p>I used the Obsession Trigger I learned that day, and she soon introduced me to her friends, then took me to an isolated corner of the bar.</p>
+      <h2 class="subhead">“This Instagram Model Couldn’t Get Enough Of Me...”</h2>
+      <p>Turns out she’s a famous Instagram model and showed me her account… she had over 250,000 followers, and some of the hottest pictures this side of the sun!</p>
+      <p>When she showed me her DM’s, <strong>I was stunned.</strong></p>
+      <p>Big names that if I was to mention here I’d definitely get sued…</p>
+      <p>Yet, she picked <strong><u>ME</u></strong> out of the <em>thousands</em> of options she had.</p>
+      <div class="image-split">
+        <div class="image-block">
+          <img src="/images/instagram-model.jpg" alt="Instagram model test">
+        </div>
+        <div>
+          <p>While cuddling in bed after that night, she asked me...</p>
+          <p><span class="hotline">“You just say all the right things… why haven’t I met a guy like you before?”</span></p>
+        </div>
+      </div>
+      <p><strong>That’s when I knew this was different.</strong></p>
+      <div class="pull">“I’ve NEVER Said “All The Right Things” Before But With These Triggers, It Felt Like I Couldn’t Get Rejected If I Tried!”</div>
+      <p>But it’s not just me...</p>
+      <h2 class="subhead">“ALL The Guys Using These Obsession Triggers Are Getting Laid By SMOKING Hot Girls”</h2>
+      <p>After hearing their results Daniel and I knew that these Obsession Triggers had earned the right to be distributed to a wider audience.</p>
+      <p>It was just unfair that regular good guys like us didn’t know about them…</p>
+      <p><span class="hotline">Bringing us to why you’re here today...</span></p>
+    </section>
+
+    <section class="copy-section">
+      <p>In just a moment I’m going to show you how you can get access to these obsession triggers so you can start to use them on any women you like.</p>
+      <p>Turning her into a loyal girlfriend, fuck buddy, or reigniting that spark in your marriage, making it like it first was.</p>
+      <h2 class="subhead">“This Is Your ONLY Chance To Learn These Powerful Obsession Triggers”</h2>
+      <p>This is truly a once-in-a-lifetime opportunity, so if you’re ready to know all of the exact Obsession Triggers and words that are proven to make women want you…</p>
+      <p>If you’re ready to finally know exactly what to say to the most beautiful woman, to get her crazy for you...</p>
+      <p>If you’re ready to have your choice of beautiful women and the ability to hand pick the “Dream Girls”, the perfect 10’s of the world...</p>
+      <p>This is your only shot to learn every single one of Daniel ’s Obsession Triggers, ripped straight from the pages of the Literotica that has turned hundreds of millions of women on.</p>
+      <p>Once you learn the Obsession Triggers, you’ll have the power to make women fall absolutely in love with you, with just a few simple words.</p>
+      <p>A woman won’t notice anything different about what you say… but all of a sudden, she’ll be gushing with desire for you and realizing that you’re the man she’s been waiting for her whole life.</p>
+      <p>And it’s all because the Obsession Triggers are the words that activate her deepest passions, fantasies and desires.</p>
+      <div class="pull">“Over 100 Million Women Have Masturbated To The Triggers You’ll Have In Your Hands!”</div>
+      <p>Millions of women are chained to their Literotica books night after night, waiting the whole day to get their fix of the Obsession Triggers.</p>
+      <p>But now instead of going to a book on their bed stand...they’ll be getting their fix from YOU.</p>
+      <p>You’ll see for yourself how fast women go from uninterested to absolutely hooked on you, just by saying these Obsession Triggers.</p>
+      <p><span class="hotline">And the best part?</span> The Obsession Triggers do all the work, so it doesn’t matter what you look like, or how old you are.</p>
+      <p>You don’t have to change who you are or turn into someone you’re not to get them to work for you.</p>
+      <p>You don’t have to worry about having the perfect body or a ton of money before getting the high quality women you want.</p>
+      <p>And you don’t have to submit yourself to the brutal competition of all the other guys interested in her.</p>
+      <p>All you have to do is casually slip a few Obsession Triggers into conversation with a woman you want, and her mind will explode with feelings for you… triggering an avalanche of good feelings and arousal in her body.</p>
+      <p>Whether it’s a girl that you’ve met for the very first time, or a girl that you’ve already known who wasn’t into you before, use some of the Obsession Triggers and you’ll discover for yourself how magical, blissful, and never-ending a woman’s love is when it’s focused entirely on you.</p>
+      <p>You’ll have the rarest power a man can possibly have - the power of true choice in the dating game.</p>
+      <h2 class="subhead">“With The Obsession Triggers In Your Hands, If You Want A Woman, You’ll Have Her”</h2>
+      <p><strong>No more settling.</strong> No more having to settle for women who aren’t even your second choice.</p>
+      <p>No more being judged, ignored, or called weird by women who don’t understand you.</p>
+      <p>No more being confused about how to show your feelings without being labeled a “creeper”.</p>
+      <p>No more hanging out with low quality, boring women who don’t share any interests with you.</p>
+      <p>Just watch the videos and pick the Obsession Triggers you want to use, and you’ll get complete control over your dating life, and the power to make women fall head over heels in love with you.</p>
+    </section>
+
+    <section class="copy-section">
+      <p>And that brings us to why you’re here today…</p>
+      <p>In just a moment I’ll show you how you can also claim a copy of the Obsession Triggers so you can start to change your life in some incredible ways just like all the others before you.</p>
+      <p>But first, I must warn you if you’re still seeing this page that means you can still secure your copy of Obsessions Triggers, but it could go down any second.</p>
+      <p>Dan & I have been fighting back at the feminists to keep this website up.</p>
+      <p>They’ve been doing everything in their power to take this website down (And they’ve already succeeded twice before).</p>
+      <p>I am not sure how much longer this site will remain online...</p>
+      <p>So if there is even the slightest chance that you want access to Obsessions Triggers (and who wouldn’t?), I urge you not to close out of this page until you’ve secured your copy.</p>
+      <div class="image-split reverse">
+        <div>
+          <p>We’ve created a <strong>private website</strong> where you'll download the system and you can start learning in minutes from now.</p>
+          <p>All from the comfort of your own home.</p>
+        </div>
+        <div class="image-block">
+          <img src="/images/private-members.jpg" alt="Private members area">
+        </div>
+      </div>
+      <p>The Obsessions Triggers isn’t designed to give you information overload, nor did we create it to jam your head full of fluff and theory.</p>
+      <p>Just watch the video training and you'll be set. Just a simple step by step process to follow along...</p>
+      <p>Dan has built the system in a way that would allow anyone to use it.</p>
+      <p>So no matter how old or young you are, your height, what you look like, or if you’ve never talked to a woman before. Obsession Triggers will work for you!</p>
+      <p>You never have to worry about knowing what to say, making the first move,or getting rejected…!</p>
+      <p>We’ve even created a 1 page guide that shows you how to bed ANY girl in less than 15 minutes!</p>
+      <p>From the first impressions, all the way to taking her home…</p>
+      <p>Since it’s release just a few weeks ago, <span class="u-red">over three thousand twenty eight regular guys</span> from all over the world have used this system to drastically change their lives..</p>
+      <p>96.9% reported being able to sleep with at least three new women every month.</p>
+      <p>And 91.2% of men report having their first threesome....</p>
+    </section>
+
+    <section class="copy-section">
+      <div class="testi">
+        <div class="testi-inner">
+          <div class="testi-photo"><img src="/images/testi-johnny.jpg" alt="Johnny testimonial"></div>
+          <div class="testi-copy">
+            <div class="testi-name">Johnny from Tampa Florida</div>
+            <blockquote>“My woman’s name is Sandy, and I’ve been wanting her for years. We work together, though, and I never thought I’d be able to transition from work friends to something more. The very next time I saw Sandy, I started talking to her, just like normal. Except, this time, I used the whirlwind romance phrase. Everything I said just HIT.”</blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="testi-inner">
+          <div class="testi-photo"><img src="/images/testi-james-miller.jpg" alt="James Miller testimonial"></div>
+          <div class="testi-copy">
+            <div class="testi-name">James Miller from Dallas Texas</div>
+            <blockquote>“I am a young guy, so at this point in my life It's awesome to find stuff like this that can help guide me in the right direction. That been said, I appreciate your efforts and intentions coming from a guy that needed this right now, so thank you.”</blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="testi-inner">
+          <div class="testi-photo"><img src="/images/testi-danny-d.jpg" alt="Danny D testimonial"></div>
+          <div class="testi-copy">
+            <div class="testi-name">Danny D from Boise Idaho</div>
+            <blockquote>“I use the Day 3 Rejection Annihilator Material to OWN women whenever I go up to talk to them, and now I know that even if they seem like a bitch at first, I know exactly what to do to get them to open up to me.”</blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="copy-section">
+      <p>In just a minute, I'm going to show you what to do to become the next success story.</p>
+      <p>And since you’ve been paying attention so far, you probably realize how powerful Obsessions Triggers is.</p>
+      <p>Maybe you’re even thinking of all the different ways you could use it starting today..</p>
+      <p>Maybe you’ll use it on a friend who friendzoned and turn her into a friend with benefits.</p>
+      <p>Maybe you’ll use it to date multiple women and have them feel good & happy about it.</p>
+      <p>Maybe you’ll use it to reignite that spark in your relationship - to make it like it first was.</p>
+      <p>Or… Maybe, you’ll use it to just sleep with as many women as you can while you’re still alive…</p>
+      <p>Either way, Obsessions Triggers can and WILL give you that.</p>
+      <p>Right now, you’ve probably got a couple questions, like...</p>
+      <p><strong>How can I get access to this right now?</strong></p>
+      <p><strong>How much is this going to cost?</strong></p>
+      <p><strong>And is it guaranteed to work for me?</strong></p>
+      <p>I’ll answer these questions right now, but first I have a question for you.</p>
+      <p>What's it worth to FINALLY have full and complete control over your love life?</p>
+      <p>To date and sleep with the women you desire? The women you deserve.</p>
+      <p>What's it worth to never have to worry about rejection ever again?</p>
+      <p>What's it worth, to never settle for mediocre, to finally have your pick of the litter?</p>
+      <p>What would it be worth to you to know that you'd never have to spend another lonely night again, because you can start a sexual relationship with almost any woman you want—rather than settling for whatever comes your way?</p>
+      <p>What would it be worth to you — to know that no matter how old you get, or what shape you’re in… You’ll still have an amazing woman by your side…A woman who truly loves you, for YOU…</p>
+      <p>Think about the control you’d have over your life. What would it be worth for this kind of transformation?</p>
+      <p>The folks who have access to Obsessions Triggers, say they <strong>couldn’t even begin to put a price</strong> on the transformation.</p>
+      <p>I mean, wouldn't you agree yourself?</p>
+      <p>It's a <span class="u-red">cheatcode</span>, an advantage most guys will never have.</p>
+      <p>It's the key to a <strong>higher standard of living</strong>, and the pathway to a richer, more fulfilling life.</p>
+      <p>It’s a way to have complete confidence that any women you come across can be yours.</p>
+      <p>To understand women so well that they'll only want to be with you because other men “just don't get it”, and seem unfulfilling by comparison?</p>
+      <p>Numerous people have told me that we should charge $10,000 or $8,000 for this system.</p>
+      <p>But I know that’s out of reach for most people. And charging that much would exclude the people I want to help anyways.</p>
+      <p>I am not in this for the money, and neither is Dan.</p>
+      <p>Sorry to be blunt, but we don’t need the money. And the only reason Daniel is even risking his career further is to share this information with others because he knows what it’s like to struggle with women.</p>
+      <p>Dealing with constant rejections or getting ignored as if you don’t exist… How frustrating it gets, ending up alone, night after night with a tub of Vaseline and internet porn - ceasing to ever feel the touch of a woman.</p>
+      <p>How it feels to give it your all and still feel like you’re not going anywhere..</p>
+      <p>How it feels to take women on expensive dates and shower them with gifts only to be put in the friendzone…</p>
+      <p>So I am <strong>not</strong> going to ask you to fork away <span class="u-red">$10,000 or $8,000</span> for this system like most authorities would advise me to.</p>
+      <p>And although this would still be a bargain at even $1,000 or $500. In this economy, that won't cut it.</p>
+      <p>So you won’t have to pay $500, or even $300.</p>
+      <p>In fact, <strong><u>it won’t even cost you $100.</u></strong></p>
+      <p>The truth is I’m not even interested in making a profit on this… All I ask is that you help cover the expenses it takes to run this website…</p>
+      <p><span class="hotline">So when you claim your copy of Obsessions Triggers, you’ll get instant access to the entire system for just $77.</span></p>
+      <p>But that’s not all…</p>
+      <p>Because you’ve made it this far into the presentation. It’s obvious that you’re serious about having the women you want, the women you deserve…</p>
+      <p>And you’re interested in seeing how this ONE of a kind solution can help you, the same way it’s helping THOUSANDS of others…</p>
+      <p>Which is why I want to let you try this cutting edge system at a special price only available through this video, on this page today…</p>
+      <p>So today, for a limited time only…</p>
+      <p>Daniel and I would like to offer you access to <span class="hotline">The Obsessions Triggers for just $67!</span></p>
+    </section>
+
+    <section id="order">
+      <div class="offer-drop">
+        <div class="offer-top">
+          <div class="kicker">Special Presentation Price</div>
+          <h2>Claim Obsessions Triggers Today</h2>
+        </div>
+        <div class="offer-body">
+          <div class="full-offer-grid" style="margin-bottom:28px">
+            <div class="mockup-slot">
+              <div>
+                <strong style="display:block;font-size:20px;margin-bottom:10px;color:#5f000a">PRODUCT MOCKUP</strong>
+                <div style="font-size:16px;line-height:1.6">
+                  Place image here:<br>
+                  <span style="color:#8b000f">/images/ot-final-mockup.jpg</span>
+                </div>
+              </div>
+            </div>
+            <div>
+          <div class="price-row">
+            <span class="old-price">$77</span>
+            <span class="new-price">$67</span>
+          </div>
+          <p>That’s another $10 off… Over the next month, that's going to break down to less than $2.34 a day, about the same price as a cup of coffee.</p>
+          <div class="mystery-stack">
+            <div class="mystery-row"><span class="mystery-dot">1</span><span><strong>Instant access</strong> to the private system Daniel has been keeping underground.</span></div>
+            <div class="mystery-row"><span class="mystery-dot">2</span><span><strong>The one-page shortcut guide</strong> that shows you what to do from first impression to taking her home.</span></div>
+            <div class="mystery-row"><span class="mystery-dot">3</span><span><strong>Plus 3 private inner-circle bonuses</strong> you’ll learn about in just a moment...</span></div>
+          </div>
+          <p style="font-family:Arial,sans-serif;font-size:15px;line-height:1.45;color:#777;margin:14px 0 4px">Keep scrolling — Daniel’s private bonus stack is revealed below.</p>
+          <a href="#" class="cta">Order Now</a>
+          <div class="secure">Secure 256-bit SSL checkout • Instant digital access</div></div>
+          </div>
+          
+            </div>
+          </div>
+        </div>
+
+      <div style="margin-top:34px;padding:30px;border-top:1px solid #eadcdc;background:linear-gradient(180deg,#fff 0%,#fff8f8 100%);border-radius:0 0 24px 24px">
+        <p><strong>It’s even less than the cost of condoms</strong> you'll need this year once you start using the system. <span class="hotline">(Trust me, you're going to need them!)</span></p>
+
+        <p>All I ask in return, is that you consider sending us a success story, once you start experiencing the <strong>life changing transformation</strong> that so many others like you are now experiencing…</p>
+
+        <p>And you should know that I am <span class="u-red">not going to limit the amount of time</span> you can keep the system.. It’ll be yours forever.</p>
+
+        <p><strong>So click the button below and claim your copy of Obsessions Triggers now.</strong></p>
+
+        <p>Once you’ve hit the “ORDER NOW” button below, you’ll be taken to our <strong>100% safe and secure checkout page</strong> where you’ll enter your order information and credit card number.</p>
+
+        <p>The order form is fully protected using the very latest <span class="hotline">256 bit SSL encryption</span> for total privacy and protection, it’s the same security that giants like Amazon.com use.</p>
+
+        <p>And as soon as you hit “Submit”.. <strong>Obsessions Triggers will be emailed to you immediately.</strong></p>
+
+        <div class="pull" style="margin:36px 0 30px">“But That’s Not All... Not By A Long Shot.”</div>
+
+        <p><span class="hotline">Being a part of this test group means you're now part of Daniel’s inner circle.</span></p>
+
+        <p>So he’s going to arm you with some <strong>exclusive bonuses</strong> that aren’t available anywhere else to guarantee your success..</p>
+
+        <p><span class="u-red">Get ready… This is where the fun comes in…</span></p>
+
+        <p><strong>I was even shocked when I first saw the list… Check it out:</strong></p>
+      </div>
+    </section>
+
+    <section class="copy-section">
+      <div class="bonus">
+        <div class="bonus-num">Your 1st FREE Gift</div>
+        <h3>“The 10 Commandments”</h3>
+        <p>Listen, dating a regular girl is one thing, but dating a 9 or 10? Is a whole other thing…</p>
+        <p>You see, when you put the Obsession Triggers to use, you’re going to start meeting some incredibly hot women. And you'll quickly start to learn they’re used to getting what they want, being the center of attention, and having guys shower them with gifts.</p>
+        <p>But that’s not the game Daniel wants to play, (and I bet you feel the same). So he figured out how to outgun the “bigger, better deal” guys without spending money, and he’s since had a string of relationships with women who are wayyyy “out of his league”...</p>
+      </div>
+
+      <div class="bonus">
+        <div class="bonus-num">Your 2nd FREE Gift</div>
+        <h3>“PUSSY MULTIPLIER”</h3>
+        <p>Having one smoking hot 10 is great. But what about having 2 or 3? For some of us we can simply never have enough… You can use this whether you just want a threesome or you simply want to be with multiple women all at once …</p>
+        <p>This is a TELL-ALL report by Daniel on how he handles his harem of women on a day to day basis…</p>
+        <div class="testi" style="margin-bottom:0">
+          <div class="testi-inner">
+            <div class="testi-photo"><img src="/images/testi-jon-miami.jpg" alt="Jon from Miami"></div>
+            <div class="testi-copy">
+              <div class="testi-name">Jon from Miami</div>
+              <blockquote>“Just 3 months ago I was a virgin, and the idea of having a hot 10 be my girlfriend, let alone 2 of them… It was out of the picture…Using Obsessions Triggers I’d already started sleeping with a new woman every week… But Daniel’s PUSSY MULTIPLIER took things to the next level…”</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bonus">
+        <div class="bonus-num">Your 3rd FREE Gift</div>
+        <h3>“BIGGER & BETTER”</h3>
+        <p>You ever saw one of those pornos where the guy pulls out his 8 Inch cock and fucks 2 smoking hot chicks non stop for an hour straight?</p>
+        <p>When I first got started I was — well… lacking in a certain department… and honestly? I never had any issues with it…. But deep down I WISHED for it to just be a tad bit bigger.</p>
+        <p>And I tried EVERYTHING… and when I say everything I mean everything.</p>
+        <p>So when Daniel told me about his coworkers new discovery I was EXCITED… They’re calling it “ERECTOUS MAXIMUS” and it starts working the very first time you use it…</p>
+      </div>
+    </section>
+
+    <section class="copy-section" id="complete-package">
+      <div class="offer-drop">
+        <div class="offer-top">
+          <div class="kicker">Everything You Get Today</div>
+          <h2>Your Complete Obsessions Triggers Package</h2>
+        </div>
+        <div class="offer-body">
+          <div class="full-offer-grid">
+            <div class="mockup-slot">
+              <div>
+                <strong style="display:block;font-size:20px;margin-bottom:10px;color:#5f000a"></strong>
+                <div style="font-size:16px;line-height:1.6">
+                  <span style="color:#8b000f">/images/ot-final-mockup.jpg</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="price-row">
+                <span class="old-price">$77</span>
+                <span class="new-price">$67</span>
+              </div>
+              <div class="value-stack">
+                <div class="value-item"><strong>Complete Obsessions Triggers System</strong><span>Included</span></div>
+                <div class="value-item"><strong>1 Page “Bed ANY Girl” Guide</strong><span>Included</span></div>
+                <div class="value-item"><strong>Bonus #1: The 10 Commandments</strong><span>FREE</span></div>
+                <div class="value-item"><strong>Bonus #2: PUSSY MULTIPLIER</strong><span>FREE</span></div>
+                <div class="value-item"><strong>Bonus #3: BIGGER & BETTER</strong><span>FREE</span></div>
+              </div>
+              <a href="#" class="cta">Order Now</a>
+              <div class="secure">Instant access • 30-day guarantee • Secure checkout</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>So, if you’re serious about changing your life, then click the button below this video to secure your copy of Obsessions Triggers...</p>
+      <div class="pull">“But Wait — There’s More!”</div>
+      <div class="guarantee">
+        <h2 class="subhead" style="margin-top:0">Protected By Our 30-Day, 100% Money-Back Guarantee</h2>
+        <p>Daniel and I are so convinced that Obsessions Triggers is unlike anything you’ve ever seen or tried before, that we’re going to guarantee your order today...</p>
+        <p>When you place your order through this website, you’re protected by our 30-day, 100% money-back guarantee.</p>
+        <p>If for any reason you’re not satisfied, just send us an email and we’ll refund every single penny — no questions asked.</p>
+        <p>And I'll take it even a step further and say this: If you don’t sleep with at least three new women in the next three weeks or you finally get that one girl you've been thinking about forever. Then I want you to come back and ask me for a refund.</p>
+        <div class="pull">“Either You’re Getting Laid — Or You Get Your Money Back.”</div>
+      </div>
+      <p>Just try it for a couple weeks, and see what happens..</p>
+      <p>And honestly? I’m sure you will never ask for a refund…because it'll work for you.</p>
+      <p>Just like it worked for me — and for so many others who are now living this life by using this exact system.</p>
+      <p>And if you do decide to request a refund (which, again, I find highly unlikely), get this: You can keep the system and all the bonuses. Every single one.</p>
+      <p>Because I appreciate that you trusted me enough to try it.</p>
+      <p>That means you don’t even have to make a decision right now… Just say maybe.</p>
+      <p>And you’ll have all the time you need to test it out for yourself!!</p>
+      <p>Simply click the button that's below now and secure your copy of Obsessions Triggers...</p>
+      <p>Within minutes, you’ll get instant access to the private members platform.</p>
+      <div class="image-block">
+        <img src="/images/members-platform-preview.jpg" alt="Members platform preview">
+      </div>
+    </section>
+
+    <section class="copy-section">
+      <div class="final-choice">
+        <h2>Right now, you’ve got an important decision to make...</h2>
+        <p>Likely the most important decision you’ve made in a long time… A decision where you must make the choice between two very different outcomes.</p>
+      </div>
+      <h2 class="subhead">Option 1: Leave This Page And Do Nothing</h2>
+      <p>To leave this page and keep doing what you've been doing all along… continuing to experience the frustrations and challenges that brought you here in the first place.</p>
+      <p>A life where you’re always invisible to women, a life where women don’t give you the respect you deserve… Telling yourself that “things will eventually fall into place”... Never able to truly enjoy the sexual freedom you desire.</p>
+      <p>A life where you NEVER TRULY live out your deepest sexual fantasies…</p>
+      <h2 class="subhead">Option 2: Never Settle For Mediocre Again</h2>
+      <p>To take matters into your own hands and start pulling perfect 10’s everywhere you go….</p>
+      <p>To wake up everyday knowing that today like yesterday you can go out there and bang any smoking hot chick you desire…</p>
+      <p>All that's left for you to do is to click the button below and get access to Obsessions Triggers right now.</p>
+      <p>Now it’s up to you… You can carry on as you’ve always been… Or you can try Obsessions Triggers absolutely risk-free for 90 days…</p>
+      <p>You have absolutely nothing to lose, and everything to gain. I guarantee you'll be satisfied. If not, you don't pay a single penny.</p>
+      <p>Just click the download button and get it all started today.</p>
+      <div class="offer-drop">
+        <div class="offer-top">
+          <div class="kicker">Final Chance Before You Leave</div>
+          <h2>Get Instant Access To The Complete System</h2>
+        </div>
+        <div class="offer-body">
+          <div class="full-offer-grid">
+            <div class="mockup-slot">
+              <div>
+                <strong style="display:block;font-size:20px;margin-bottom:10px;color:#5f000a">FINAL PRODUCT MOCKUP</strong>
+                <div style="font-size:16px;line-height:1.6">
+                  <span style="color:#8b000f">/images/ot-final-mockup.jpg</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="price-row">
+                <span class="old-price">$77</span>
+                <span class="new-price">$67</span>
+              </div>
+              <div class="value-stack">
+                <div class="value-item"><strong>Obsessions Triggers System</strong><span>Instant Access</span></div>
+                <div class="value-item"><strong>Private Members Platform</strong><span>Included</span></div>
+                <div class="value-item"><strong>1 Page Fast-Start Guide</strong><span>Included</span></div>
+                <div class="value-item"><strong>All 3 Inner-Circle Bonuses</strong><span>FREE</span></div>
+                <div class="value-item"><strong>30-Day Guarantee</strong><span>Protected</span></div>
+              </div>
+              <a href="#" class="cta">Order Now</a>
+              <div class="secure">Secure checkout • Instant access • Risk-free guarantee</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="final-link-cta">Click Here To Get Started Today</a>
+    </section>
+  </main>
+</body>
+</html>
