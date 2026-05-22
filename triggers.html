@@ -447,6 +447,58 @@
       }
     }
 
+  
+
+    /* TESTIMONIAL STACK FIX — images above text on desktop + mobile */
+    .testi-inner{
+      display:flex !important;
+      flex-direction:column !important;
+      grid-template-columns:none !important;
+      gap:0 !important;
+      align-items:stretch !important;
+    }
+
+    .testi-photo{
+      width:100% !important;
+      height:auto !important;
+      min-height:0 !important;
+      border-right:0 !important;
+      border-bottom:1px solid #eee !important;
+      background:#f7f7f7 !important;
+      overflow:hidden !important;
+      display:block !important;
+    }
+
+    .testi-photo img{
+      width:100% !important;
+      height:auto !important;
+      max-height:none !important;
+      aspect-ratio:16/9 !important;
+      object-fit:cover !important;
+      object-position:center center !important;
+      background:#f7f7f7 !important;
+      display:block !important;
+      padding:0 !important;
+    }
+
+    .testi-copy{
+      padding:25px 28px !important;
+    }
+
+    @media(max-width:700px){
+      .testi-photo{
+        height:auto !important;
+      }
+      .testi-photo img{
+        height:auto !important;
+        aspect-ratio:16/9 !important;
+        object-fit:cover !important;
+      }
+      .testi-copy{
+        padding:22px 20px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
