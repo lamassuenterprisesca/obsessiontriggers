@@ -1,0 +1,541 @@
+@charset "utf-8";
+
+/**
+ * ===================================
+ * FEATHERLIGHT MODAL/LIGHTBOX STYLES
+ * ===================================
+ */
+
+/* Prevent body scrolling when modal is open */
+html.with-featherlight {
+  overflow: hidden;
+}
+
+/* Modal overlay background */
+.featherlight {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2147483647;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #333;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Darken background for last modal */
+.featherlight:last-of-type {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Vertical centering helper */
+.featherlight:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* Modal content container */
+.featherlight .featherlight-content {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  overflow: auto;
+  padding: 25px 25px 0;
+  border-bottom: 25px solid transparent;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-height: 95%;
+  background: #fff;
+  cursor: auto;
+  white-space: normal;
+}
+
+/* Custom modal styling - red border */
+.featherlight-content {
+  border: 4px solid red !important;
+  padding-bottom: 15px !important;
+  max-width: 650px;
+  border-radius: 10px;
+}
+
+/* Modal inner content */
+.featherlight .featherlight-inner {
+  display: block;
+}
+
+/* Hide link, script, and style tags in modal */
+.featherlight link.featherlight-inner,
+.featherlight script.featherlight-inner,
+.featherlight style.featherlight-inner {
+  display: none;
+}
+
+/* Close button styling */
+.featherlight .featherlight-close-icon {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  line-height: 25px;
+  width: 25px;
+  cursor: pointer;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  border: 0;
+  padding: 0;
+}
+
+/* Remove Firefox button inner border */
+.featherlight .featherlight-close-icon::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Image styling in modal */
+.featherlight .featherlight-image {
+  width: 100%;
+}
+
+/* Iframe modal specific styles */
+.featherlight-iframe .featherlight-content {
+  border-bottom: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.featherlight iframe {
+  border: 0;
+}
+
+/* Box sizing for all featherlight elements */
+.featherlight * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Tablet/Mobile responsive styles */
+@media only screen and (max-width: 1024px) {
+  .featherlight .featherlight-content {
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 98%;
+    padding: 10px 10px 0;
+    border-bottom: 10px solid transparent;
+  }
+}
+
+/* Hide content when printing modal */
+@media print {
+  html.with-featherlight > * > :not(.featherlight) {
+    display: none;
+  }
+}
+
+/**
+ * ===================================
+ * POPUP MODAL UTILITY CLASSES
+ * ===================================
+ */
+
+/* Heading sizes */
+.head85 {
+  font-size: 2.24rem;
+}
+
+.head56 {
+  font-size: 1.47rem;
+}
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Clearfix for floats */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Margins */
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+/* Width utility */
+.w-90 {
+  width: 90%;
+}
+
+/* Button text sizing */
+.big-button-text {
+  font-size: 1.125rem;
+}
+
+/* Float utilities */
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/* Color utilities */
+.color-white {
+  color: #fff;
+}
+
+.color-black {
+  color: #000;
+}
+
+.color-cyan {
+  color: #3a888e;
+}
+
+/* Black links - all states */
+a.color-black,
+a.color-black:link,
+a.color-black:active,
+a.color-black:visited,
+a.color-black:hover {
+  color: black;
+}
+
+/**
+ * ===================================
+ * VIDEO CONTAINER & LAYOUT
+ * ===================================
+ */
+
+/* Container utilities */
+.container-limit {
+  max-width: 1000px !important;
+}
+
+.container-full {
+  max-width: 100% !important;
+  width: auto !important;
+  padding: 0 !important;
+}
+
+.change-container {
+  padding: 20px 30px 30px 30px;
+  margin: 0 auto !important;
+}
+
+/* Black background for fullscreen video */
+.black-background-vid {
+  background: #000 !important;
+}
+
+/**
+ * ===================================
+ * VIDEO WRAPPER RESPONSIVE SIZING
+ * ===================================
+ */
+
+/* Desktop video wrapper - 16:9 aspect ratio */
+.video-wrapper-desktop {
+  max-height: 100vh;
+  max-width: 177.77vh; /* 16:9 = 1.7777 */
+  margin: auto;
+  min-width: 272px;
+  min-height: 153px;
+}
+
+/* Mobile video wrapper - 10:16 aspect ratio (portrait) */
+.video-wrapper-mobile {
+  max-height: 100vh;
+  max-width: 62.5vh; /* 10:16 = 0.625 */
+  margin: auto;
+  min-width: 175px;
+  min-height: 280px;
+}
+
+/**
+ * ===================================
+ * WISTIA VIDEO EMBED STRUCTURE
+ * ===================================
+ */
+
+/* Video wrapper - absolutely positioned within padding container */
+.vid-wrapper {
+  height: 100% !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 100% !important;
+}
+
+/* Video padding container - maintains aspect ratio */
+.vid-padding {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Mobile aspect ratio - 10:16 portrait */
+.vid-padding-mobile {
+  padding: 160% 0 0 0 !important; /* 16/10 = 1.6 = 160% */
+}
+
+/* Desktop aspect ratio - 16:9 landscape */
+.vid-padding-desktop {
+  padding: 56.25% 0 0 0 !important; /* 9/16 = 0.5625 = 56.25% */
+}
+
+/* Video embed container */
+.vid-embed {
+  height: 100% !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+/* Video border styling */
+.video-border {
+  -webkit-box-shadow: 0 6px 19px -4px rgba(0, 0, 0, 0.98);
+  -moz-box-shadow: 0 6px 19px -4px rgba(0, 0, 0, 0.98);
+  box-shadow: 0 6px 19px -4px rgba(0, 0, 0, 0.98);
+  position: relative;
+  border: 3px solid #fff;
+}
+
+/**
+ * ===================================
+ * VIDEO OVERLAY CONTROLS
+ * ===================================
+ */
+
+/* Prevent video control interaction */
+.preventControl {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 99999;
+}
+
+/**
+ * ===================================
+ * PLAY/UNMUTE BUTTON OVERLAYS
+ * ===================================
+ */
+
+/* Base styling for continue (play) and unmute buttons */
+.button-continue,
+.button-unmute {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 25;
+  display: none; /* Hidden by default, shown via JavaScript */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  cursor: pointer;
+}
+
+/* Mobile unmute button image */
+.button-unmute-mobile {
+  background-image: url(/jv/sound.png);
+}
+
+/* Desktop unmute button image */
+.button-unmute-pc {
+  background-image: url(/images/sound_on.png) !important;
+}
+
+/* Mobile continue/play button image */
+.button-continue-mobile {
+  background-image: url(/jv/video.png);
+}
+
+/* Desktop continue/play button image */
+.button-continue-pc {
+  background-image: url(/images/click-to-play-video.png) !important;
+}
+
+/**
+ * ===================================
+ * PULSING ANIMATION
+ * ===================================
+ */
+
+/* Pulsing effect for overlay buttons */
+.pulsing {
+  transform: scale(1);
+  animation: pulsing 1s infinite;
+}
+
+/* Pulsing keyframe animation */
+@keyframes pulsing {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.034); /* Slightly larger */
+    box-shadow: 0 0 0 10px transparent; /* Expanding shadow */
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+/**
+ * ===================================
+ * YELLOW CTA BUTTON
+ * ===================================
+ */
+
+.yellow-button {
+  background: #fffd00;
+  border: 3px solid #00f;
+  color: #00f;
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.yellow-button:active,
+.yellow-button:hover {
+  background-color: #d7ffe6;
+  color: #00f;
+  border: 3px solid #00f;
+}
+
+/**
+ * ===================================
+ * LOADING STATE
+ * ===================================
+ */
+
+/* Loading overlay */
+.loading-video {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 5;
+  background-color: #000;
+}
+
+/* Loading animation gif */
+.loading-video-inner {
+  background: url(/images/loading-video.gif) no-repeat center center;
+  background-size: contain;
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/**
+ * ===================================
+ * CLICKBANK TRUST BADGE
+ * ===================================
+ */
+
+#cbBadge {
+  position: absolute;
+  z-index: 50;
+}
+
+.topCBblock {
+  height: 26px;
+  background: #fff;
+}
+
+@media (max-width: 480px) {
+  .topCBblock {
+    display: none !important;
+  }
+}
+
+/**
+ * ===================================
+ * UTILITY CLASSES
+ * ===================================
+ */
+
+/* Border utilities */
+.borderSolid.border3px {
+  border-width: 3px;
+  border-style: solid;
+}
+
+/* Background cover */
+.bgCover {
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: repeat repeat !important;
+  background-position: center center;
+}
+
+/* Border radius */
+.radius0 {
+  border-radius: 0px;
+}
+
+/* Text selection is now enabled */
+.is-unselectable {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Remove padding */
+.is-paddingless {
+  padding: 0 !important;
+}
+
+/* Remove margin */
+.is-marginless {
+  margin: 0 !important;
+}
+
+/* Hide element */
+.is-hidden {
+  display: none !important;
+}

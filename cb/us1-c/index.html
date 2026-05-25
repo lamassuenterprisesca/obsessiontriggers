@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <link rel="canonical" href="/cb" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SM – Dating System for Men</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/images/apple-touch-icon.png"
+    />
+
+    <style>
+      /* ===== Base ===== */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: #050815;
+        color: #f9fafb;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      /* ===== Layout ===== */
+      .page-wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 16px 40px;
+      }
+
+      @media (min-width: 768px) {
+        .main-container {
+          padding: 40px 24px 60px;
+        }
+      }
+
+      /* ===== Header Bar ===== */
+      .header-bar {
+        width: 100%;
+        background: linear-gradient(90deg, #7f1d1d, #dc2626, #7f1d1d);
+        color: #f9fafb;
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      /* ===== Typography Blocks ===== */
+      .main-headline {
+        font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+        font-weight: 700;
+        text-align: center;
+        margin: 24px auto 12px;
+        color: #f9fafb;
+        line-height: 1.15;
+      }
+
+      .main-headline .underline {
+        border-bottom: 3px solid #f97373;
+        padding-bottom: 4px;
+      }
+
+      .intro-text {
+        text-align: center;
+        font-size: 0.95rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #fca5a5;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .body-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #e5e7eb;
+      }
+
+      .body-text p {
+        margin-bottom: 14px;
+      }
+
+      /* ===== Card Styles ===== */
+      .card-main {
+        background: #0b0f1e;
+        border-radius: 18px;
+        padding: 24px 18px 26px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
+        border: 1px solid #111827;
+      }
+
+      @media (min-width: 768px) {
+        .card-main {
+          padding: 28px 26px 30px;
+        }
+      }
+
+      /* Product Image */
+      .product-wrapper {
+        margin: 26px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .product-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+        border: 1px solid #1f2937;
+      }
+
+      /* ===== Summary Box ===== */
+      .summary-box {
+        margin: 18px 0 22px;
+        padding: 14px 14px 12px;
+        border-radius: 14px;
+        background: radial-gradient(circle at top left, rgba(248, 113, 113, 0.18), #020617);
+        border: 1px solid rgba(248, 113, 113, 0.5);
+      }
+
+      .summary-box-title {
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #fecaca;
+      }
+
+      .summary-box ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 0.9rem;
+      }
+
+      .summary-box li {
+        margin-bottom: 4px;
+      }
+
+      /* ===== Guarantee ===== */
+      .guarantee-section {
+        margin-top: 28px;
+        padding: 18px 16px;
+        border-radius: 16px;
+        background: linear-gradient(
+          135deg,
+          rgba(248, 113, 113, 0.18),
+          rgba(153, 27, 27, 0.9)
+        );
+        border: 1px solid rgba(252, 165, 165, 0.5);
+      }
+
+      .guarantee-title {
+        font-size: 1.05rem;
+        text-align: center;
+        margin: 0;
+        color: #fef2f2;
+      }
+
+      /* ===== CTA Button ===== */
+      .cta-wrapper {
+        margin: 26px 0 8px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        border-radius: 999px;
+        overflow: hidden;
+        background: linear-gradient(90deg, #fecaca, #ef4444);
+        box-shadow: 0 20px 55px rgba(248, 113, 113, 0.85);
+      }
+
+      .cta-main-text {
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 12px 10px 4px;
+        color: #111827;
+      }
+
+      .cta-price-text {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0 10px 10px;
+        color: #111827;
+        font-weight: 600;
+      }
+
+      .cta-button:hover {
+        filter: brightness(1.05);
+        transform: translateY(-1px);
+        box-shadow: 0 24px 60px rgba(248, 113, 113, 0.95);
+      }
+
+      .cta-button:active {
+        transform: translateY(0);
+        box-shadow: 0 18px 45px rgba(248, 113, 113, 0.8);
+      }
+
+      /* ===== FAQ ===== */
+      .faq-block {
+        margin-top: 56px;
+        margin-bottom: 40px;
+      }
+
+      .faq-title {
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 22px;
+        color: #f9fafb;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      @media (min-width: 900px) {
+        .faq-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 22px;
+        }
+      }
+
+      .faq-column {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .faq-item {
+        background: #020617;
+        border-radius: 14px;
+        padding: 12px 12px 10px;
+        border: 1px solid #7f1d1d;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.9);
+      }
+
+      .faq-question h3 {
+        font-size: 0.95rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .question-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        border-radius: 999px;
+        border: 2px solid #f97373;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #f97373;
+      }
+
+      .faq-answer {
+        margin-top: 8px;
+      }
+
+      .faq-answer p {
+        margin: 0;
+        font-size: 0.82rem;
+        line-height: 1.6;
+        color: #e5e7eb;
+      }
+
+      /* ===== Footer ===== */
+      .footer-section {
+        margin-top: auto;
+        background: #020617;
+        border-top: 1px solid #111827;
+        color: #d1d5db;
+        padding: 18px 16px 26px;
+      }
+
+      .footer-content {
+        max-width: 960px;
+        margin: 0 auto;
+        font-size: 0.78rem;
+        line-height: 1.6;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+
+      .footer-link {
+        text-decoration: none;
+        color: #fecaca;
+        font-weight: 500;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer-disclaimer p {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <div class="header-bar">HK Ultra – SM Upgrade (Sovereign Masculinity)</div>
+
+      <main class="main-container">
+        <div class="card-main">
+          <h1 class="main-headline">
+            Activate the
+            <span class="underline">SM Intensive Program</span>
+            and accelerate your development with HK Ultra
+          </h1>
+
+          <p class="intro-text">Exclusive upgrade only for new HK Ultra members</p>
+
+          <div class="body-text">
+            <div class="summary-box">
+              <div class="summary-box-title">Short Summary of the SM Upgrade</div>
+              <ul>
+                <li>SM stands for <strong>Sovereign Masculinity</strong> – no games, no manipulation.</li>
+                <li>Learn how to communicate respectfully, clearly, and authentically with women.</li>
+                <li>Focus on presence, boundaries, consent, and emotional maturity.</li>
+                <li>Ideal as a deep-dive upgrade to HK Ultra if you want sustainable relationships.</li>
+              </ul>
+            </div>
+
+            <p>
+              With <strong>HK Ultra</strong>, you have already secured a system that helps you 
+              get to know women in an authentic, respectful, and adult way. You gain clarity 
+              on how you carry yourself, how you communicate, and the impact you have on others.
+            </p>
+
+            <p>
+              However, many men have written to us saying they want to go a step further: 
+              away from superficial "tricks" – and toward true <strong>sovereignty</strong>, 
+              inner peace, and stable, healthy connections. That is exactly why we developed 
+              <strong>SM – Sovereign Masculinity</strong>.
+            </p>
+
+            <p>
+              SM is a complementary intensive program to HK Ultra that focuses on three core areas:
+              <br />– your inner posture as a man
+              <br />– your way of speaking with women (including sensitive topics)
+              <br />– and your handling of intimacy, boundaries, and responsibility
+            </p>
+
+            <div class="product-wrapper">
+              <img
+                src="/images/sm-compliant.png"
+                alt="SM – Sovereign Masculinity Upgrade"
+                class="product-image"
+              />
+            </div>
+
+            <p>
+              Instead of trying to "outsmart" or control women, the SM program is about 
+              creating an atmosphere where both sides feel taken seriously: 
+              <strong>respectful, consensual, and free of games</strong>.
+            </p>
+
+            <p>
+              You learn to set clear boundaries – and at the same time, respect the boundaries of others. 
+              You learn how to honestly speak what you want, without pressure, without drama, 
+              and without a "mask." As a result, conversations become easier, encounters more honest, 
+              and relationships more stable.
+            </p>
+
+            <p>
+              SM is ideal for you if:
+              <br />– you're tired of toxic dating tips and misogyny
+              <br />– you want to take responsibility for your behavior and your impact
+              <br />– you're ready to grow as a man – emotionally, communicatively, and in character
+            </p>
+
+            <p>
+              We have already prepared the SM upgrade in your HK Ultra member area. 
+              If you decide to join now, your access will be activated and you will receive 
+              instant access to:
+            </p>
+
+            <p>
+              – a clear <strong>SM Roadmap</strong>, so you don't have to leave anything to chance from 
+              the first meeting to deeper trust<br />
+              – practical conversation examples and phrasings to communicate respectfully but clearly<br />
+              – exercises to help you let go of insecurity, shame, and old patterns step by step<br />
+              – continuous updates whenever new content, examples, or strategies are added
+            </p>
+
+            <p>
+              Important: SM is not a tool to manipulate someone or push them into something 
+              they don't want. The program is explicitly aimed at men who want to live 
+              <strong>consensual, respectful, and mature encounters</strong> – whether it's a date, 
+              a new relationship, or an existing partnership.
+            </p>
+
+            <p>
+              Because this intensive program requires personal support, ongoing optimization, and 
+              additional content, we cannot open it to all members at once. Only a small portion of 
+              new HK Ultra customers see this page. If you are reading this right now, 
+              you belong to this selected group.
+            </p>
+
+            <p>
+              So, if you feel that you no longer want to leave your dating and relationship life to 
+              some "gurus" with misogynistic approaches, but want to go your own way – 
+              clear, respectful, and sovereign – then <strong>SM – Sovereign Masculinity</strong> 
+              is the logical next step after HK Ultra.
+            </p>
+
+            <div class="guarantee-section">
+              <h2 class="guarantee-title">
+                Your upgrade is protected by our 60-day money-back guarantee – 
+                test SM at your leisure. If it doesn't suit you, you get your money back.
+              </h2>
+            </div>
+
+            <div class="cta-wrapper">
+
+<div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; padding: 12px 14px; background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.4); border-radius: 12px;">
+  <input 
+    type="checkbox" 
+    id="agreeCheckbox" 
+    style="margin-top: 3px; width: 18px; height: 18px; accent-color: #ef4444; cursor: pointer; flex-shrink: 0;"
+  >
+  <label for="agreeCheckbox" style="font-size: 0.82rem; color: #fecaca; line-height: 1.5; cursor: pointer;">
+    I understand that I am purchasing a <strong>recurring monthly subscription</strong> to SM – Sovereign Masculinity at <strong>$97/month</strong>. I can cancel at any time by contacting support.
+  </label>
+</div>
+
+          <a 
+  href="https://hkultra.pay.clickbank.net/?cbur=a&cbitems=6&cbrblaccpt=true" 
+  id="accept"
+  class="cta-button no-underline" 
+  onclick="return acceptCheck();"
+>
+                <div class="cta-main-text">Yes, I want to secure my copy of SM – Sovereign Masculinity</div>
+                <div class="cta-price-text">
+                   For only only $97 
+
+                   and secure my free trial to the SM updates access for just $97/mo
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+            <div class="mb-16 flex items-center justify-center underline">
+      <a href="https://hkultra.pay.clickbank.net/?cbur=d&cbitems=6&cbfid=63225">
+        No Thank You, I don't want this right now
+      </a>
+    </div>
+  </div>
+
+        <section class="faq-block">
+          <h2 class="faq-title">Frequently Asked Questions (FAQs)</h2>
+
+          <div class="faq-grid">
+            <div class="faq-column">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    How &amp; when do I get access to SM?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Immediately after your order, your SM upgrade will be activated in your existing 
+                    HK Ultra member area. You will also receive an email with all the details. 
+                    Usually, you will have access to all content within about 30 seconds.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Does SM work if I'm rather shy?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Yes. SM was developed specifically for men who don't identify with a 
+                    loud presence or "putting on a show." You learn how to become sovereign 
+                    from within your own personality – without pretending and without 
+                    crossing boundaries.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Can I implement SM alongside a full-time job?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Yes. The lessons are structured so that you can go through them at your own pace. 
+                    Many participants have jobs, studies, or other obligations. You can 
+                    implement the content step-by-step in the evenings or on weekends.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-column">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Is SM backed by a money-back guarantee?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Yes. You can test the program for 60 days. If you realize during this time 
+                    that SM isn't for you, you can request a refund. We only want men in 
+                    the program who truly want to change something.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Do I need a lot of experience with women?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    No. SM starts with the basics of your inner posture and communication 
+                    and then builds up step-by-step. What matters is not how much experience 
+                    you have – but that you are ready to look honestly and take responsibility 
+                    for your behavior.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Will I receive updates when new content is added?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Yes. When new modules, examples, or strategies are published, we will 
+                    inform you via email. This keeps you up to date on communication, 
+                    relationship dynamics, and healthy masculinity.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-column">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Who is SM – Sovereign Masculinity suitable for?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    For men who want to consciously shape their dating and relationship life: 
+                    whether they currently have trouble meeting women, often end up in the 
+                    "friend zone," or want to make their existing relationship more stable, 
+                    honest, and fulfilling – without games and without misogyny.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    What results can I expect from the SM program?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Specific results vary for everyone. What you can expect: a much better 
+                    understanding of how to deal with women respectfully, clearly, and 
+                    authentically; how to set healthy boundaries, take responsibility, 
+                    and appear more mature, calm, and attractive as a man – without 
+                    exploiting anyone.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-section">
+        <div class="footer-content">
+          <p
+            style="
+              text-align: center;
+              font-size: 0.75rem;
+              color: #ffffff;
+              line-height: 1.5;
+              margin-top: 0.875rem;
+              margin-bottom: 1.5rem;
+            "
+          >
+
+
+          <div class="footer-links">
+            <a href="/privacy-policy/" class="footer-link"
+              >Privacy Policy &amp; Terms of Use</a
+            >
+            <a href="mailto:team@getpegasusoriginal.com" class="footer-link"
+              >Contact Us</a
+            >
+          </div>
+
+          <div class="footer-disclaimer">
+            <p>
+              NOTE: Individual results may vary. The experiences and examples described 
+              are for illustrative purposes only. We do not claim that you will achieve 
+              the same results. Your results depend on many factors, including – but not 
+              limited to – your personality, your communication, your experience, and your 
+              willingness to actually implement what you've learned. Every form of 
+              personal development requires effort, honesty with yourself, and consistent 
+              action. If you are not willing to take responsibility for your own results, 
+              you should not book this training.
+            </p>
+            <p>
+              This website and the products and services offered are not affiliated with 
+              Instagram, Meta, or any other social network and are not sponsored, 
+              endorsed, or reviewed by them.
+            </p>
+            <p>
+              ClickBank® is a registered trademark of Click Sales, Inc., a Delaware 
+              corporation located at 1444 S. Entertainment Ave., Suite 410, Boise, ID 83709, 
+              USA and is used by permission. ClickBank's role as a retailer does not 
+              constitute an endorsement, approval or review of these products or any claim, 
+              statement or opinion used in promotion of these products.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/cb/page-loader.js"></script>
+
+    <script>
+  function acceptCheck() {
+    var agreeCheckbox = document.getElementById("agreeCheckbox");
+    if (agreeCheckbox.checked) {
+      return true;
+    } else {
+      window.alert("Please check the box to confirm you understand this is a recurring monthly subscription.");
+      return false;
+    }
+  }
+</script>
+
+  </body>
+</html>

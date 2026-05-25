@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Upgrade Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="/css/styles.css" rel="stylesheet">  
+  
+  
+  <style>
+:root {
+  --page-bg: #f6eeee;
+  --site-red: #a81422;
+  --site-red-dark: #7f101a;
+  --accent-red: #cf1f32;
+  --accent-red-dark: #9f1726;
+  --red: #c9192e;
+  --gold: #d49b32;
+  --text: #1f1618;
+  --muted: #6d5a5f;
+  --line: #ead7db;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,.12);
+  --container: 960px;
+  --article-width: 800px;
+  --body-size: 18px;
+  --body-line: 1.7;
+  --headline-size: clamp(30px, 4vw, 42px);
+  --heading-font: Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background:
+    radial-gradient(circle at top center, rgba(255,255,255,.55), transparent 34%),
+    linear-gradient(180deg, #f7efef 0%, #f6eeee 56%, #efe2e3 100%);
+  color: var(--text);
+  font-size: var(--body-size);
+  line-height: var(--body-line);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+li,
+.intro-letter,
+.lead,
+.story-card,
+.testimonial,
+.product-break__text {
+  font-size: var(--body-size);
+  line-height: var(--body-line);
+  color: #2b2325;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+strong {
+  font-weight: 800;
+}
+
+/* ORDER BAR */
+
+.order-progress-wrap {
+  background: var(--site-red-dark);
+  padding: 10px 12px;
+  border-bottom: 2px solid rgba(255,255,255,.08);
+}
+
+.order-progress {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.order-step {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 6px 20px 6px 16px;
+  background: linear-gradient(180deg, #fff5f6, #f9e3e6);
+  color: #2b1b1e;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  border: 1px solid #e7bfc5;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%, 10px 50%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+}
+
+.order-step:first-child {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
+  padding-left: 18px;
+}
+
+.order-step.is-complete {
+  color: var(--site-red);
+  background: linear-gradient(180deg, #ffe5e8, #f8ccd2);
+  border-color: #e5aab3;
+}
+
+.order-step .step-icon,
+.order-step .step-number {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 900;
+  flex: 0 0 22px;
+  border: 2px solid rgba(0,0,0,.2);
+  background: #fff;
+  color: #111;
+}
+
+.order-step.is-complete .step-icon {
+  background: var(--site-red);
+  color: #fff;
+  border-color: var(--site-red-dark);
+}
+
+.order-step .step-number {
+  background: #111;
+  color: #fff;
+}
+
+/* TOP STRIP */
+
+.badge-strip {
+  background: #fff0f2;
+  color: var(--site-red-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+/* PAGE LAYOUT */
+
+.page {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 24px 14px 44px;
+}
+
+.content-shell {
+  background: transparent;
+}
+
+.unified-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(168,20,34,.08);
+}
+
+/* HERO */
+
+.hero {
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,.18), transparent 34%),
+    linear-gradient(135deg, #b41626, #8e1220);
+  color: #fff;
+  padding: 34px 30px 30px;
+  text-align: center;
+}
+
+.headline,
+.section-title {
+  font-family: var(--heading-font);
+  font-size: var(--headline-size);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  margin: 0 auto 18px;
+}
+
+.headline {
+  color: #fff;
+  max-width: 780px;
+}
+
+.section-title {
+  color: var(--accent-red-dark);
+  max-width: var(--article-width);
+}
+
+.subheadline {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: var(--body-size);
+  line-height: var(--body-line);
+  font-weight: 700;
+  color: rgba(255,255,255,.96);
+}
+
+/* ARTICLE */
+
+.article {
+  background: #fff;
+  padding: 36px 32px 34px;
+  font-size: var(--body-size);
+  line-height: var(--body-line);
+}
+
+.intro-letter {
+  max-width: var(--article-width);
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+.section {
+  max-width: var(--article-width);
+  margin: 0 auto;
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.lead {
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.section-kicker {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--site-red);
+  margin-bottom: 14px;
+}
+
+/* BOXES */
+
+.quote-box {
+  background: linear-gradient(180deg, #fffafb, #fff3f5);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  margin: 24px 0;
+  font-size: var(--body-size);
+  line-height: var(--body-line);
+  font-weight: 700;
+  color: #46252d;
+  text-align: center;
+}
+
+.highlight-box {
+  background: #fff5f6;
+  border: 1px solid #f0c9d0;
+  border-left: 6px solid var(--accent-red);
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+  margin: 22px 0;
+}
+
+.highlight-box strong {
+  color: var(--site-red-dark);
+}
+
+.story-card {
+  background: linear-gradient(180deg, #fffafb, #fff7f8);
+  border: 1px solid #f0d8dc;
+  border-radius: 18px;
+  padding: 24px 22px;
+  margin: 24px 0;
+  box-shadow: 0 8px 22px rgba(0,0,0,.05);
+}
+
+.story-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--site-red);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+/* LISTS */
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 8px;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 30px;
+  margin: 0 0 14px;
+}
+
+.bullet-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 900;
+  color: var(--site-red);
+}
+
+/* TESTIMONIALS */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.testimonial {
+  background: #fff;
+  border: 1px solid #f0dde0;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+.testimonial .stars {
+  color: #f5a623;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.testimonial-name {
+  font-weight: 800;
+  margin-top: 12px;
+  color: var(--site-red-dark);
+}
+
+/* OFFER */
+
+.offer-section {
+  max-width: var(--article-width);
+  margin: 0 auto;
+}
+
+.product-break {
+  background: #fff4e5;
+  border: 2px solid #ffd575;
+  border-radius: 16px;
+  padding: 28px 24px;
+  margin: 34px auto 0;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+  max-width: var(--article-width);
+}
+
+.product-break__title {
+  color: var(--red);
+  font-size: var(--headline-size);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  font-family: var(--heading-font);
+}
+
+.product-break__text {
+  max-width: 680px;
+  margin: 0 auto 18px;
+}
+
+.continue-button-responsive {
+  width: 350px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+
+.footer {
+  background: var(--site-red-dark);
+  color: rgba(255,255,255,.82);
+  padding: 24px 20px 36px;
+  margin-top: 34px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer p {
+  color: rgba(255,255,255,.82);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --body-size: 16px;
+    --headline-size: 30px;
+  }
+
+  .page {
+    padding: 14px 8px 28px;
+  }
+
+  .hero {
+    padding: 24px 16px 24px;
+  }
+
+  .article {
+    padding: 24px 16px 28px;
+  }
+
+  .section {
+    padding: 26px 0;
+  }
+
+  .headline,
+  .section-title {
+    font-size: var(--headline-size);
+  }
+
+  .subheadline {
+    font-size: var(--body-size);
+  }
+
+  .order-progress-wrap {
+    padding: 8px;
+  }
+
+  .order-progress {
+    gap: 8px;
+  }
+
+  .order-step {
+    font-size: 12px;
+    padding: 6px 16px 6px 12px;
+  }
+
+  .order-step:first-child {
+    padding-left: 14px;
+  }
+
+  .product-break {
+    padding: 24px 16px;
+  }
+
+  .continue-button-responsive {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .continue-button-responsive {
+    width: 441px;
+    max-width: 441px;
+  }
+}
+
+.offer-product-image {
+  max-width: 390px;
+  width: 100%;
+  margin: -110px auto 24px;
+}
+
+@media (max-width: 640px) {
+  .offer-product-image {
+    max-width: 310px;
+    margin: -85px auto 20px;
+  }
+}
+
+.sticky-offer-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -120px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #b41626, #7f101a);
+  border-top: 3px solid #ffcc33;
+  box-shadow: 0 -10px 30px rgba(0,0,0,.25);
+  padding: 12px 14px;
+  transition: bottom .35s ease;
+}
+
+.sticky-offer-bar.is-visible {
+  bottom: 0;
+}
+
+.sticky-offer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.sticky-offer-text {
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  text-align: center;
+}
+
+.sticky-offer-text span {
+  color: #ffcc33;
+  font-size: 28px;
+  letter-spacing: .04em;
+}
+
+.sticky-offer-btn {
+  border: 0;
+  background: linear-gradient(180deg, #ffd85c, #ffb100);
+  color: #221600;
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 13px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,.22);
+}
+
+@media (max-width: 640px) {
+  .sticky-offer-bar {
+    padding: 10px 10px;
+  }
+
+  .sticky-offer-inner {
+    gap: 8px;
+  }
+
+  .sticky-offer-text {
+    font-size: 14px;
+  }
+
+  .sticky-offer-text span {
+    font-size: 22px;
+  }
+
+  .sticky-offer-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="order-progress-wrap">
+    <div class="order-progress">
+      <div class="order-step is-complete">
+        <span class="step-icon">✓</span>
+        <span>Order Placed</span>
+      </div>
+      <div class="order-step">
+        <span class="step-number">2</span>
+        <span>Customize Order</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="badge-strip">Wait! Your order is not yet complete</div>
+
+  <main class="page">
+    <div class="content-shell">
+      <div class="unified-card">
+        <section class="hero">
+          <h1 class="headline">"Best She's Ever Had!"
+</h1>
+          <p class="subheadline">How to Have Mind-Blowing Sex That <br> Leaves Her BEGGING For More... <br> (Even If You're A Virgin...)</p>
+
+        </section>
+
+        <article class="article">
+          <div class="intro-letter">
+            <p><strong>Hey, it’s Daniel Choi here… </strong>
+                <br> <br>
+                I wanted to personally congratulate you for making such an incredible decision… It’s only up from here and your life is about to transform in ways you never thought possible
+                <br> <br>
+                If you’re seeing this letter then you’re one lucky duck because what I have in store for you is OUT OF THIS WORLD… Believe me
+          </div>
+
+          <section class="section">
+            <h2 class="section-title"> You’ll want to see this...</h2>
+            <p class="lead">But first, I want to say:
+<br>
+I admire you… 
+<br><br>
+Seriously.. 
+<br><br>Because look at what just happened here…
+<br><br>You came in with the deck stacked against you and now the tides have turned in your favour..
+<br><br>While most people blame the outside world, you took action.. 
+<br><br>You didn’t just take action, you took control
+<br><br>You took matters into your own hands… And you should be proud of that… 
+<br><br>I’m excited for you.. I can’t wait for you to experience all the amazing, life changing transformations that are possible thanks to the HK-ULTRA
+<br><br>The reason you’re seeing this page is because I have an awesome FREE gift for you…
+</p>
+        
+            <div class="quote-box">Over the last few months Dan and I have been working on something massive - a breakthrough that will not ONLY revolutionize the HK-ULTRA system, but also the way you live life as a whole…
+
+So pay close attention to this short update, because this can and will take your results to a whole new level… 
+
+</div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">It all started with Nick David</h2>
+            <div class="story-card">
+              <div class="story-label">a member of HK-ULTRA who emailed us saying..</div>
+              <p>“Hey guys, first off… thank you for creating HK-ULTRA and The Slut Mode Update. For years I felt like I was invisible to women. But now, it’s like a switch has flipped — I can practically make any girl putty in my hands. 
+                
+<br><br>
+It’s almost like I have a magic wand that overwhelmed her with so intense feelings of lust and desire to the point where SHE starts CHASING ME… 
+<br><br>
+Now, this is all great, but here’s the embarrassing part… This stuff works too well, and I wasn’t ready for what’s about to happen next… 
+<br><br>
+I just pulled my first 9, and beforeI knew it, we were back in my place and as she dropped to her knees unbuckling my belt, I froze… as the realization hit… 
+<br><br>
+I’m a virgin… 
+<br><br>
+My heart started racing and I just couldn’t get it up…
+<br><br>
+And believe me, I was excited, but I had no idea what to do next, how to escalate things, how to pleasure her in ways never imaginable…. My mind started racing with thoughts of 
+<br><br>
+<strong>what she could say about what kind of lover I was</strong>
+<br><br>
+<strong>What if it made it’s way out to the world?</strong>
+<br><br>
+<strong>What if my friends found out? </strong>
+<br><br>
+Luckily at that moment I got a really important call and simply pushed her to the side…
+<br><br>
+We agreed we’d finish what we started tonight, and I have no idea what to do… So I’m turning to you guys for help. 
+<br><br>
+Please help me asap, thanks
+<br><br>
+Best, Nick David.</p>
+            </div>
+            
+            <p>That’s when Dan and I realized we had to do something about this…</p> <br>
+            <p>Because the harsh reality is:</p> <br>
+            <p>Getting a woman into bed is one thing… Keeping her around is a whole different story</p> <br>
+            <strong>And 90% of it comes to down to GREAT SEX</strong>
+            <ul class="bullet-list">
+              <li>Sex that gets her addicted to you… </li>
+              <li>Sex that has her counting down the days, hours and minutes until you’re inside her again…</li>
+              <li>and Sex that has her bragging to her friends about what a stud you are in the bedroom!</li>
+            </ul>
+            <br>
+            <p>Sex that leaves a permanent mark in her mind - Sex she’ll never forget even after she’s married with 3 kids… She’ll always remember those intense, earth shattering orgasms that left her sore and limping for days… </p>
+        <br>
+        <p>and listen...</p>
+        <ul class="bullet-list">
+              <li>You don’t need to be hung like a horse to give a woman amazing orgasms.</li>
+              <li>and Sex that has her bragging to her friends about what a stud you are in the bedroom!</li>
+              <li>You don’t need to be young… or handsome… or even in good shape.</li>
+            </ul>
+
+            <br>
+            <p>When you know how to “push the right buttons” nothing matters… 
+<br><br>
+That’s the secret.
+<br><br>
+That’s how you give her the best orgasms of her life, and make her addicted to fucking you.
+<br><br>
+And that’s when Dan and I decided to put together something so revolutionary it’s never been done before</p>
+<br>
+        </section>
+
+          <section class="section">
+            <h2 class="section-title">Introducing The "Sex God”</h2>
+            <p class="subheadline">Every Man’s Guide To Being The BEST She’s Ever Had..</p>
+            <p>The first and only guide that breaks down the psychological + physical step by step instructions <br> to giving any woman the earth shattering, pulsating, leg shaking orgasms that’ll practically make it impossible for her to ever leave you… </p>
+            <br>
+            <p>Because deep down, she KNOWS she’ll never experience it anywhere else..</p>
+            <br>
+            <p>Deep down, she knows you’re the ONLY MAN who’s able to satisfy her in ways she never even thought are possible </p>
+            <br>
+            <p>And the best thing? We’ve found that doing this right only amplifies the effects of the other techniques </p>
+            <div class="quote-box">The “Sex God” system has changed everything for us… and the members of HKULTRA </div>
+            <ul class="bullet-list">
+              <li>Kinky sex becomes childs play</li>
+              <li>Often times, you won’t even be the one to initiate it</li>
+              <li>She’ll be coming up with ideas of things she wants to try - it’s the least she can do to pay you back for all the amazing sex you’ve given her</li>
+              <li>She won’t care if you have 2,3 or 4 other girlfriends… She’ll accept the fact that you’re simply in high demand… and she’ll understand why… </li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Here’s what these guys are saying...</h2>
+
+            <div class="testimonial-grid">
+              <div class="testimonial">
+                <div class="stars">★★★★★ "She’d been faking orgasms the entire time we have been together..." </div>
+                <p>"I can't believe I'm writing in. About a week ago I overheard my girlfriend talking on the phone with her best friend Sally… and then I heard the words I’d always dreaded 
+“I would never tell him this but I have been faking orgasms the entire time we have been together. I don’t know how much longer I can go on. I love him so much, but I have needs, and if they’re not met, I’ll find someone who can satisfy me…” 
+
+When you came up with “Sex God” I KNEW I needed, that very same night I used the simple fingering technique that you talked about in the second video!" She orgasmed so hard that she needed to rest for 2 minutes… She was talking again to Sally yesterday
+
+“I can’t stop myself, I just get wet thinking about him.. It’s killing me.”
+
+Apparently Sally was so intrigued that she was down for a threesome.. (Hint, I did use the slut mode for this, and it seems to work too well haha) 
+
+Please, make more videos because this really is what guys need to know.
+thank you!
+
+</p>
+                <div class="testimonial-name">Adam S, </div>
+              </div>
+
+              <div class="testimonial">
+                <div class="stars">★★★★★ "My whole sex life just flipped upside down… She's the one always hounding me for sex!"</div>
+                <p>"Hi guys, well you asked me to write you if I liked the program and lets just say I
+LOVED IT! I've been with my girl for almost 2 years now and while things were
+great at the beginning we were now down to having sex like once a week and I just
+didnt get it. I got your program and tried out the “leg shaking orgasm” technique and a
+few others, 
+
+Well lets just say I've never seen my girl scream like that before, EVER!
+Now we are having sex a LOT more and I love the way it's now her who's the one
+always hounding me for sex! Not only is our sex life 100 times better, the way she
+acts when we use this product makes me feel like I am 7' tall and have a 9in cock..
+"
+</p>
+                <div class="testimonial-name">Chris Williams </div>
+              </div>
+            </div>
+          </section>
+
+          <p>Your name can be up there aswell - as you join us and the others in becoming SEX GODS</p> <br>
+            <p>So right here, right now, we’re officially inviting you to join the “Sex God” program for absolutely free before the official release… </p> <br>
+            <p>So if you're ready to have:</p> <br>
+            
+            
+                    <ul class="bullet-list">
+              <li>Sex that gets her addicted to you… </li>
+              <li>Sex that has her counting down the days, hours and minutes until you’re inside her again…</li>
+              <li>and Sex that has her bragging to her friends about what a stud you are in the bedroom!</li>
+            </ul>
+            <br>
+            
+            <p> then I invite you to</p>
+
+            <h2 class="section-title">Try "Sex God" For Just $1 Per Day Today</h2>
+
+            <br>
+            <p>You can add "Sex God" to your order today for up to 50% off. And I want you to try it for 90 days without risking a single penny...</p>
+             
+            <br>
+
+            <p> If you're unhappy for whatever reason, simply let us know and we'll refund every penny...</p>
+            <br>
+            
+            <p>As our newest VIP member, Dan and I have included a copy of the “Sex God” directly on your members platform…  All you have to do is confirm that you still want your copy… All we ask is that you chip in to cover the costs of hosting your version of the “Sex God”, which means that for just $1/Day , you can have the Sex God Program activated today.
+<br><br>
+But remember, since we’re limiting this test group to a select few, we can't offer the Sex God Program to everybody. 
+<br><br>
+So this is the only opportunity you'll have to activate the Sex God Program for this discounted price... 
+<br><br>
+Once you leave this page, you'll never get this opportunity again. So if you're serious about having the best sex of your life, and giving women the addictive, leg shaking orgasms that leave her begging for more… 
+<br><br>
+Then click the button below and confirm your copy of the “Sex God”
+</p>
+        
+<div id="offer" class="offer-section">
+
+  <div class="product-break">
+    <div class="product-break__title">
+      Secure Your Copy Of “Sex God” Today
+    </div>
+
+    <div class="product-break__text">
+      This is a one-time opportunity to unlock the full system at a heavily discounted rate.
+    </div>
+  </div>
+
+  <div style="
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border: 2px solid #f1d9dd;
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+    padding: 30px 20px;
+    text-align: center;
+  ">
+
+    <!-- PRODUCT IMAGE -->
+   <img src="/images/sexgod.webp" class="offer-product-image" />
+
+    <!-- PRICE -->
+    <div style="font-size:18px; margin-bottom:10px;">
+      Original Price:
+      <span style="text-decoration:line-through; color:#888;">
+        $297
+      </span>
+    </div>
+
+      <div style="margin:10px 0 20px; font-weight:700;">
+      Today Only
+    </div>
+
+    <div style="font-size:48px; font-weight:900; color:#a81422;">
+      $67
+    </div>
+
+  
+
+    <!-- CTA -->
+    <a href="https://hkultra.pay.clickbank.net/?cbitems=4&cbfid=63225&template=emmatimer&cbur=a">
+      <img src="/images/continue-satisfaction-button.png"
+           class="continue-button-responsive" />
+    </a>
+
+  </div>
+
+  <!-- DECLINE -->
+  <div style="max-width:700px; margin:20px auto; text-align:center;">
+    <div style="font-size:16px; color:#666;">
+      <a href="https://hkultra.pay.clickbank.net/?cbitems=4&cbur=d&cbfid=63225&template=emmatimer" style="text-decoration:underline;">
+        No thanks, No, I think I'd like to settle for mediocre sex. Let the other guys
+have all the fun. I'm 100% OK with knowing that she might be faking her orgasms. I understand I'll never see this page again and I'll lose my
+$100.00 DISCOUNT - for good
+      </a>
+    </div>
+  </div>
+
+</div>
+        
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>Premium Upgrade Page</p>
+      <p>Replace with your company details, disclaimer, refund policy, and support information.</p>
+      <p>Copyright © 2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="sticky-offer-bar" class="sticky-offer-bar">
+  <div class="sticky-offer-inner">
+    <div class="sticky-offer-text">
+      Special offer expires in <span id="sticky-countdown">10:00</span>
+    </div>
+
+    <button type="button" class="sticky-offer-btn" onclick="document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });">
+      Claim My Discount
+    </button>
+  </div>
+</div>
+
+<script>
+  let stickyTimerStarted = false;
+  let stickyTimerSeconds = 10 * 60;
+
+  function startStickyOfferTimer() {
+    if (stickyTimerStarted) return;
+    stickyTimerStarted = true;
+
+    const bar = document.getElementById("sticky-offer-bar");
+    const countdown = document.getElementById("sticky-countdown");
+
+    if (!bar || !countdown) return;
+
+    bar.classList.add("is-visible");
+
+    function renderTimer() {
+      const minutes = Math.floor(stickyTimerSeconds / 60);
+      const seconds = stickyTimerSeconds % 60;
+
+      countdown.textContent =
+        String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+
+      if (stickyTimerSeconds <= 0) return;
+
+      stickyTimerSeconds--;
+      setTimeout(renderTimer, 1000);
+    }
+
+    renderTimer();
+  }
+
+  const introSection = Array.from(document.querySelectorAll(".section-title"))
+    .find(el => el.textContent.toLowerCase().includes("introducing"));
+
+  if (introSection) {
+    const introObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          startStickyOfferTimer();
+          introObserver.disconnect();
+        }
+      });
+    }, {
+      threshold: 0.35
+    });
+
+    introObserver.observe(introSection);
+  }
+</script>
+
+</body>
+</html>

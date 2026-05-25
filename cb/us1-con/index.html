@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="canonical" href="/cb/us1">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18133684656"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18133684656');
+</script>
+
+<!-- Event snippet for Purchase conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18133684656/buZICPaJzaccELCj6MZD',
+      'value': 1.0,
+      'currency': 'USD',
+      'transaction_id': ''
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+</script>
+
+  <!-- Meta Pixel Code OG -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1849976159270109');
+fbq('track', 'PageView');
+fbq('track', 'Purchase', { currency: 'USD', value: 67.0 });
+
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1849976159270109&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  
+
+<!-- Meta Pixel Code New -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1634926231144952');
+fbq('track', 'PageView');
+fbq('track', 'Purchase', { currency: 'USD', value: 67.0 });
+
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1634926231144952&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+  <script>
+    // get the urlparam showoffer and set it to a variable
+    // todo: move this to a global script
+    var urlParams = new URLSearchParams(window.location.search);
+    var showoffer = urlParams.get('showoffer');
+  </script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap"
+    rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <link href="/css/styles.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">  <title>Pegasus</title>
+  <link rel="preconnect" href="https://fast.wistia.com/" crossorigin>
+  <link rel="preconnect" href="https://embed-cloudfront.wistia.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+  <script src="/cb/page-loader.js"></script>
+
+  <link rel="preload" as="image" href="/images/loading-video.gif">
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Open+Sans&amp;display=swap"
+    as="style" onload="this.rel='stylesheet'">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+    as="style" onload="this.rel='stylesheet'">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/apple-touch-icon.png">
+  <style>
+    /* Continue button responsive sizing - maintain 441:144 aspect ratio */
+    .continue-button-responsive {
+      width: 350px;
+      height: 114px; /* 350 / (441/144) = 114.285px ≈ 114px to maintain aspect ratio */
+      max-width: 100%;
+      object-fit: contain; /* Ensure image doesn't stretch */
+    }
+    @media (min-width: 1024px) {
+      .continue-button-responsive {
+        width: 441px !important;
+        height: 144px !important; /* Exact height to match 441:144 aspect ratio */
+        max-width: 441px !important;
+        object-fit: contain !important;
+      }
+    }
+
+    /* Slutmode downsell-style product drop */
+    :root {
+      --slutmode-dark-red: #5f0610;
+      --slutmode-dark-red-2: #7f0714;
+      --slutmode-deep-bg: #180306;
+      --slutmode-border: #f2c66d;
+      --slutmode-gold: #ffd86a;
+    }
+    .slutmode-offer-drop {
+      background: radial-gradient(circle at top center, rgba(127, 7, 20, 0.35), transparent 36%), linear-gradient(180deg, #240407 0%, #120203 100%) !important;
+      border-top: 8px solid var(--slutmode-dark-red);
+      border-bottom: 8px solid var(--slutmode-dark-red);
+      box-shadow: inset 0 18px 40px rgba(0,0,0,.35);
+    }
+    .slutmode-offer-inner { padding-left: 16px; padding-right: 16px; width: 100%; }
+    @media (min-width: 1024px) {
+      .slutmode-offer-inner { max-width: 1280px !important; width: 92vw !important; }
+    }
+    .slutmode-offer-title { color: #fff; text-shadow: 0 3px 0 rgba(0,0,0,.35); letter-spacing: -0.02em; }
+    .slutmode-offer-title span { color: var(--slutmode-gold); }
+    .slutmode-product-card {
+      background: linear-gradient(180deg, #fffaf0 0%, #fff1d8 100%) !important;
+      border: 4px solid var(--slutmode-border) !important;
+      box-shadow: 0 22px 45px rgba(0,0,0,.45), inset 0 0 0 2px rgba(255,255,255,.7);
+      overflow: visible;
+      max-width: 100%;
+    }
+    .slutmode-product-card::before {
+      content: "ONE-TIME NEW MEMBER UPGRADE";
+      position: absolute; left: 50%; top: -34px; transform: translateX(-50%);
+      background: linear-gradient(180deg, var(--slutmode-dark-red-2), var(--slutmode-dark-red));
+      color: #fff; border: 2px solid var(--slutmode-gold); border-radius: 999px;
+      padding: 8px 18px; font-family: Georgia, 'Times New Roman', serif; font-weight: 700;
+      font-size: 14px; letter-spacing: .04em; white-space: nowrap; box-shadow: 0 10px 20px rgba(0,0,0,.35); z-index: 8;
+    }
+    .slutmode-product-image-wrap { filter: drop-shadow(0 18px 24px rgba(0,0,0,.35)); z-index: 10; pointer-events: none; }
+    .slutmode-product-image-wrap img { position: relative; z-index: 11; }
+    .slutmode-price-box {
+      background: rgba(255,255,255,.72); border: 2px dashed rgba(95,6,16,.35); border-radius: 18px;
+      padding: 14px 18px 18px; box-shadow: inset 0 0 20px rgba(95,6,16,.08);
+      z-index: 4;
+    }
+    @media (min-width: 1024px) {
+      .slutmode-product-card { min-height: 720px; }
+      .slutmode-price-box { min-width: 560px; }
+    }
+    .slutmode-original-price { color: #2b0508; font-weight: 700; }
+    .slutmode-today-text { color: var(--slutmode-dark-red); }
+    .slutmode-price { color: var(--slutmode-dark-red) !important; text-shadow: 0 3px 0 rgba(255,216,106,.7); }
+    .slutmode-no-link { color: #f1d6d6 !important; }
+    .slutmode-no-link .underline { color: #f1d6d6 !important; }
+    .slutmode-footer-pad { background: #120203 !important; }
+    @media (max-width: 767px) {
+      .slutmode-product-card::before { font-size: 11px; top: -24px; padding: 7px 12px; z-index: 8; }
+      .slutmode-price-box { margin: 0 12px; padding: 10px 12px 14px; }
+    }
+    /* Slutmode matching exit popup */
+    .slutmode-modal-backdrop { background: rgba(0,0,0,.88) !important; padding: 14px; }
+    .slutmode-modal-card { background: radial-gradient(circle at top center, rgba(127,7,20,.18), transparent 34%), linear-gradient(180deg, #fffaf0 0%, #fff1d8 100%) !important; border: 4px solid var(--slutmode-border); border-radius: 18px; box-shadow: 0 26px 70px rgba(0,0,0,.65), inset 0 0 0 2px rgba(255,255,255,.65); color: #2b0508; overflow: hidden; }
+    .slutmode-modal-topbar { background: linear-gradient(180deg, var(--slutmode-dark-red-2), var(--slutmode-dark-red)); border-bottom: 3px solid var(--slutmode-border); color: #fff; padding: 18px 16px; text-align: center; text-shadow: 0 2px 0 rgba(0,0,0,.35); }
+    .slutmode-modal-close { color: #fff !important; background: rgba(0,0,0,.25); border-radius: 999px; padding: 3px; top: 10px !important; right: 10px !important; z-index: 5; }
+    .slutmode-modal-warning { color: var(--slutmode-gold); letter-spacing: .03em; }
+    .slutmode-modal-body { padding: 24px 18px 0; }
+    @media (min-width: 1024px) { .slutmode-modal-body { padding: 30px 34px 0; } }
+    .slutmode-modal-highlight { color: var(--slutmode-dark-red); text-decoration-color: var(--slutmode-dark-red); }
+    .slutmode-modal-cta { background: linear-gradient(180deg, #8b0716 0%, #5f0610 100%) !important; border: 3px solid var(--slutmode-border) !important; border-radius: 14px; box-shadow: 0 12px 24px rgba(95,6,16,.35), inset 0 1px 0 rgba(255,255,255,.22); }
+    .slutmode-modal-cta a { color: #fff !important; text-shadow: 0 2px 0 rgba(0,0,0,.35); }
+    .slutmode-modal-decline a { color: #5f0610 !important; }
+    .slutmode-modal-guarantee { background: linear-gradient(180deg, #240407 0%, #120203 100%) !important; border-top: 3px solid var(--slutmode-border); color: #f7e8d0; }
+    .slutmode-modal-guarantee strong { color: #fff; }
+
+
+    /* Popup visibility fixes only — does not touch the main offer drop/page layout */
+    .slutmode-modal-backdrop {
+      align-items: center !important;
+      padding: 10px !important;
+    }
+    .slutmode-modal-card {
+      width: min(94vw, 760px) !important;
+      max-height: calc(100vh - 20px) !important;
+      margin: 0 !important;
+      overflow-y: auto !important;
+    }
+    .slutmode-modal-topbar {
+      padding: 12px 14px !important;
+    }
+    .slutmode-modal-topbar .slutmode-modal-warning {
+      font-size: 34px !important;
+      line-height: 1 !important;
+    }
+    .slutmode-modal-body {
+      padding: 16px 18px 0 !important;
+    }
+    .slutmode-modal-body .text-\[20px\] {
+      font-size: 18px !important;
+      line-height: 1.25 !important;
+    }
+    .slutmode-modal-cta {
+      margin-top: 16px !important;
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+    .slutmode-modal-decline {
+      margin-top: 14px !important;
+    }
+    .slutmode-modal-guarantee {
+      margin-top: 16px !important;
+      padding-top: 14px !important;
+      padding-bottom: 14px !important;
+    }
+    .slutmode-modal-guarantee img {
+      width: 112px !important;
+      height: 112px !important;
+      min-width: 112px !important;
+      min-height: 112px !important;
+    }
+    @media (max-width: 767px) {
+      .slutmode-modal-card {
+        width: calc(100vw - 16px) !important;
+        max-height: calc(100vh - 16px) !important;
+      }
+      .slutmode-modal-topbar {
+        padding: 10px 34px 10px 12px !important;
+      }
+      .slutmode-modal-topbar img {
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .slutmode-modal-topbar .slutmode-modal-warning {
+        font-size: 30px !important;
+      }
+      .slutmode-modal-topbar .mt-2 {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+      }
+      .slutmode-modal-body {
+        padding: 13px 12px 0 !important;
+      }
+      .slutmode-modal-body .text-\[20px\] {
+        font-size: 16px !important;
+      }
+      .slutmode-modal-cta a {
+        font-size: 16px !important;
+        line-height: 1.15 !important;
+      }
+      .slutmode-modal-decline a {
+        font-size: 14px !important;
+        line-height: 1.25 !important;
+      }
+      .slutmode-modal-guarantee {
+        padding: 12px !important;
+      }
+      .slutmode-modal-guarantee img {
+        width: 86px !important;
+        height: 86px !important;
+        min-width: 86px !important;
+        min-height: 86px !important;
+        margin-bottom: 8px !important;
+      }
+      .slutmode-modal-guarantee .text-base {
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+      }
+    }
+
+
+    /* Bulletproof offer drop fallback */
+    [x-cloak] { display: none !important; }
+    #offer.force-show-offer {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    footer.force-show-offer {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    #sound-warning.force-hide-sound {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      margin: 0 !important;
+      height: 0 !important;
+      overflow: hidden !important;
+    }
+    #offer.offer-tight-after-video { margin-top: 24px !important; }
+    @media (max-width: 767px) {
+      #offer.offer-tight-after-video { margin-top: 24px !important; }
+      #offer .slutmode-offer-title { margin-top: 28px !important; margin-bottom: 0 !important; font-size: 25px !important; line-height: 1.15 !important; }
+      #offer .slutmode-product-card { margin-top: 72px !important; height: 590px !important; }
+      #offer .slutmode-product-image-wrap { top: 8px !important; }
+      #offer .slutmode-product-image-wrap img { height: 210px !important; width: auto !important; }
+      #offer .slutmode-price-box { top: 200px !important; }
+      #offer .slutmode-price-box .mt-24 { margin-top: 18px !important; }
+      #offer .continue-button-responsive { width: 300px !important; height: auto !important; }
+    }
+
+
+  </style>
+</head>
+
+<body class="relative font-sans h-100 m-0 p-0" x-data="{
+  show: false,
+  offerDelay: 820000,
+  revealOffer() {
+    this.show = true;
+    window.forceRevealSlutmodeOffer && window.forceRevealSlutmodeOffer();
+  },
+  initOffer() {
+    if (showoffer === '1') {
+      this.revealOffer();
+    } else {
+      setTimeout(() => this.revealOffer(), this.offerDelay);
+    }
+  },
+  showModal: false,
+}" x-init="initOffer()">
+<!-- Modal -->
+<div x-data="{ showModal: false }" x-init="
+      document.addEventListener('mouseleave', (event) => {
+          if (event.clientY <= 0) {
+              showModal = false; // set to true if we need the modal
+          }
+      });
+  ">
+    <!-- Backdrop -->
+    <div x-show="showModal" x-cloak
+      class="fixed inset-0 z-[2000] flex items-center justify-center slutmode-modal-backdrop">
+      <div
+        class="slutmode-modal-card relative h-auto"
+        @click.away="showModal = false">
+        <button type="button" class="absolute slutmode-modal-close" @click="showModal = false" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        <div>
+          <div class="slutmode-modal-topbar">
+            <div class="flex items-center justify-center gap-2 lg:gap-4">
+              <div><img class="h-8 w-8 lg:h-12 lg:w-12" src="/images/popwarn-icon.png" alt="pop warn"></div>
+              <div class="slutmode-modal-warning text-4xl lg:text-5xl font-serif font-bold">WAIT!</div>
+            </div>
+            <div class="mt-2 font-serif text-sm lg:text-lg font-bold uppercase tracking-wide">Your One-Time Slut Mode Upgrade Is About To Be Removed</div>
+          </div>
+          <div class="slutmode-modal-body">
+            <div class="text-[20px] lg:text-2xl font-bold font-serif text-center">
+              <div>Before I permanently remove <span class="slutmode-modal-highlight">The Slut Mode</span> upgrade from your order, I need you to confirm that <span class="underline slutmode-modal-highlight">you're 100% sure you want to pass on unlocking this new member upgrade.</span></div>
+            </div>
+            <div class="mt-6 text-[20px] lg:text-2xl font-bold font-serif text-center">Remember, this early bird ONE-TIME offer of $97 is only available on this page. Once you leave, this discount may be gone for good.</div>
+            <div class="slutmode-modal-cta w-full text-center px-2 lg:px-8 py-3 mt-6">
+              <a href="https://hkultra.pay.clickbank.net/?cbur=a&cbitems=6&cbrblaccpt=true&vtid=up1" class="font-sans text-lg lg:text-3xl uppercase text-white font-bold oswald-font">I changed my mind. Add The Slut Mode to my order today for just&nbsp;$97.</a>
+            </div>
+            <div class="text:lg lg:text-xl font-serif underline text-center mt-6 slutmode-modal-decline">
+              <a href="https://hkultra.pay.clickbank.net/?cbitems=2&cbur=d&cbfid=63225&template=emmatimer">No thanks. Remove The Slut Mode upgrade from my order and pass my one-time discount to another new member.</a>
+            </div>
+          </div>
+          <div class="slutmode-modal-guarantee w-full mt-6 mb-0 py-6">
+            <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center px-6">
+              <div class="flex items-center justify-center"><img src="/images/popmbseal.png" alt="money back" class="w-36 h-36 min-h-36 min-w-36 lg:ml-8 lg:min-w-48 lg:min-ht-48 lg:w-48 lg:h-48"></div>
+              <div><div class="text-center lg:text-left text-base lg:text-xl font-serif lg:leading-relaxed">I understand <strong>The Slut Mode</strong> is being offered as a new member upgrade only. I understand this special price will not be available after I leave this page. I also understand that The Slut Mode is backed by the same <strong>Ironclad 100% Money Back Guarantee</strong> within the first 24 hours of purchase.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full py-2" style="background:#5f0610;">
+      <div class="flex items-center justify-center">
+        <div class="text-center">
+          <div
+            class="text-yellow-300 font-serif text-base lg:text-lg font-semibold capitalize px-4">
+            IMPORTANT! Do NOT close this window or click the "back" button.
+          </div>
+          <div class="text-white font-serif text-base lg:text-lg lg:font-semibold capitalize px-4">
+            Clicking your "back" button will result in your order being double-billed.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-start justify-center">
+      <div class="w-full lg:max-w-[950px] lg:w-[950px]">
+        <header class="">
+          <div class="flex flex-col lg:flex-row items-center justify-center mt-6 gap-6 w-full">
+            <div class="lg:flex lg:items-center lg:justify-center lg:gap-3">
+              <div class="flex items-center justify-center lg:mt-1">
+                <div>
+                  <div class="-ml-6">
+                    <img class="w-[42px] lg:w-[77px]" src="/images/stop.png" alt="stop sign">
+                  </div>
+                </div>
+                <div
+                  class="text-upsell-red font-serif text-5xl lg:text-6xl font-bold uppercase ml-4">
+                  WAIT!</div>
+              </div>
+
+              <div class="font-serif text-center lg:text-left lg:ml-4">
+                <div class="capitalize text-base lg:text-xl -mb-2">
+                  <span>Your order is not complete yet</span>
+                </div>
+
+                <div class="capitalize text-lg lg:text-2xl font-semibold mt-2 lg:mt-2 px-6 lg:px-0">
+                  <span class="bg-upsell-yellow">Please watch this important new member update
+                    below</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start justify-center mt-3 lg:mt-1">
+            <div
+              class="relative w-[330px] h-[578px] lg:w-[910px] lg:h-[515px] border-4 bg-black flex items-center justify-center min-w-[330px] min-h-[515px]">
+              <div class="flex items-center justify-center">
+                <img src="/images/loading-video.gif" alt="Loading Video"
+                  class="absolute w-100 lg:w-[500px]" loading="lazy">
+
+                <!-- Wistia Video Container -->
+                <div
+                  class="wistia-video-container relative w-full lg:w-[910px] lg:h-[515px] aspect-w-910 aspect-h-515 border-4 border-white shadow-lg shadow-gray-500">
+                  <!-- Wistia Video -->
+                  <div id="wistia-video" class="absolute inset-0 w-full h-full"></div>
+                </div>
+              </div>
+              <!-- Placeholder Image to Reserve Space -->
+            </div>
+          </div>
+          <div id="sound-warning" class="mt-20 mb-10 lg:mt-12 text-sm lg:text-base tracking-wide font-serif font-thin">
+            <div class="lg:flex lg:items-start lg:justify-start ml-4">
+              <div>
+                <strong
+                  class="font-serif font-semibold text-pure-red text-xl lg:text-2xl whitespace-nowrap px-4">DO
+                  THIS FIRST:
+                </strong>
+              </div>
+              <div class="capitalize font-semibold text-base lg:text-xl lg:ml-4 px-4 lg:px-0">
+                Please Watch This Important New Member Update In Full Right Now. Your Access Link
+                Will Appear At The
+                End Of Your Video.
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div id="offer" x-cloak x-show="show"
+      class="slutmode-offer-drop offer-tight-after-video flex items-start justify-center mt-6 mb-8 pb-8 border-b">
+      <div class="lg:max-w-none lg:w-full slutmode-offer-inner">
+        <div class="w-full">
+          <div class="font-serif text-[24px] lg:text-[44px] font-semibold text-center mt-10 slutmode-offer-title">
+            Secure Your Copy Of <br>
+            The <span>"Slut Mode"</span> Today
+          </div>
+        </div>
+
+        <div
+          class="relative bg-upsell-ivory border-2 border-upsell-buttercream rounded-lg mt-24 w-full slutmode-product-card"
+          :class="'h-[540px] lg:h-[720px]'">
+          <div class="flex justify-center items-center w-full">
+            <div class="absolute lg:-top-28 -top-8 slutmode-product-image-wrap">
+              <div>
+                <img src="/images/slutmode.webp" alt="the code" class="sm:h-96 lg:h-[430px] w-auto h-64">
+              </div>
+            </div>
+            <div class="absolute top-40 lg:top-56 slutmode-price-box">
+              <div
+                class="lg:mt-16 mt-24 flex items-center justify-center font-serif text-xl tracking-wide gap-4 slutmode-original-price">
+                <div class="tracking-wider">
+                  Original Price:
+                  <span class="relative inline-block">$997+$297/mo
+                    <span
+                      class="absolute left-0 right-0 border-b-2 border-red-500 rotate-[-10deg] top-1/2 -translate-y-1/2"></span></span>
+                </div>
+              </div>
+              <div class="flex items-center justify-center lg:mt-6">
+                <div>
+                  <img class="mb-6 w-[65px] lg:w-auto mt-4 lg:mt-0" alt="left call out arrow"
+                    src="/images/left_arrow.png">
+                </div>
+                <div>
+                  <div class="font-serif text-2xl font-bold text-center slutmode-today-text">
+                    <div class="mt-6 lg:mt-0">Today Just For</div>
+                  </div>
+                  <div class="font-serif text-[71px] font-bold text-center -mt-3 text-upsell-teal slutmode-price">
+                    $97</div>
+                </div>
+                <div>
+                  <img class="mb-6 w-[65px] lg:w-auto mt-4 lg:mt-0" alt="right call out arrow"
+                    src="/images/right_arrow.png">
+                </div>
+              </div>
+
+              <div style="display:flex;justify-content:center;padding:0 12px;margin-top:14px;">
+  <div style="width:100%;max-width:650px;">
+
+    <div style="
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      margin:0 auto 16px;
+      padding:14px 16px;
+      background:rgba(255,216,106,0.08);
+      border:1px solid rgba(255,216,106,0.35);
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,.18);
+    ">
+    
+<input 
+  type="checkbox"
+  id="agreeCheckbox"
+  checked
+  style="
+    position:absolute;
+    opacity:0;
+    pointer-events:none;
+  "
+>
+
+      <label 
+        for="agreeCheckbox"
+        style="
+          font-size:14px;
+          line-height:1.55;
+          color:#000000;
+          cursor:pointer;
+          font-family:Georgia, serif;
+        "
+      >
+        YES! I am ready to unlock my copy of
+        <strong>The Slut Mode</strong> for 
+        <strong>and learn how to unleash her inner slutmode</strong> 
+      </label>
+
+    </div>
+
+    <div class="flex items-center justify-center px-2 lg:px-0">
+      <a 
+        href="https://hkultra.pay.clickbank.net/?cbur=a&cbitems=6&cbrblaccpt=true&vtid=up1"
+        onclick="return acceptCheck();"
+      >
+        <img 
+          alt="continue button" 
+          src="/images/continue-satisfaction-button.png" 
+          class="continue-button-responsive"
+        >
+      </a>
+    </div>
+
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex justify-center items-center mb-16">
+          <a href="javascript:void(0);">
+            <div class="flex items-start justify-start gap-2 px-6 lg:px-0">
+              <div>
+                <img class="min-w-4 min-h-4 w-4 h-4" src="/images/cross.png" alt="cross button">
+              </div>
+              <div
+                class="text-sm lg:text-[19px] font-serif underline tracking-wider font-thin text-gray-700 cursor-pointer slutmode-no-link"
+                @click="showModal= true">
+                <div class="leading-relaxed">
+                 No, I think I'd rather keep her inner slut locked away. Let the other guys have all the fun. I'm 100% fine with her playing it safe and me continuing to settle for second-rate sex. I know I'll never see that site again and I'm losing my discount—forever.
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <footer x-show="show" class="mb-12">
+      <div class="flex items-center justify-center">
+        <div>
+       <!--    <p style="text-align: center; font-size: 0.75rem; color: #666; line-height: 1.5; margin-top: 0.875rem; margin-bottom: 1.5rem;">
+            All sales are final after 24 hours of purchase.<br />
+            This ensures fast delivery, fair access, and protection against digital misuse.
+          </p> -->
+          <div
+            class="flex items-center justify-center mt-12 font-serif text-sm lg:text-xl tracking-wide font-light gap-4">
+            <div><a href="/tos/index.html">Privacy Policy &amp; Terms Of Service</a></div>
+            <div>|</div>
+            <div><a href="mailto:support@gethkultra.com">Contact Us</a></div>
+          </div>
+          <div
+            class="flex items-center justify-center font-serif text-sm lg:text-xl tracking-wide font-light mt-3 lg:px-0 px-4 text-center">
+            Copyright © 2025 HK Ultra. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="pt-24 bg-[#f9f9f9] slutmode-footer-pad"></div>
+
+    <script>
+      // Bulletproof offer-drop fallback: works even if Alpine/x-show does not render properly.
+      (function () {
+        var OFFER_DELAY_MS = 820000; // Change this to 820000 for 13:40.
+
+        function revealOffer() {
+          var offer = document.getElementById('offer');
+          var footer = document.querySelector('footer');
+          var soundWarning = document.getElementById('sound-warning');
+
+          if (soundWarning) {
+            soundWarning.classList.add('force-hide-sound');
+            soundWarning.style.display = 'none';
+          }
+
+          if (offer) {
+            offer.removeAttribute('x-cloak');
+            offer.style.display = 'flex';
+            offer.classList.add('force-show-offer', 'offer-tight-after-video');
+          }
+
+          if (footer) {
+            footer.removeAttribute('x-cloak');
+            footer.style.display = 'block';
+            footer.classList.add('force-show-offer');
+          }
+
+          // No auto-scroll: let the offer appear naturally underneath the video.
+        }
+
+        window.forceRevealSlutmodeOffer = revealOffer;
+
+        if (showoffer === '1') {
+          revealOffer();
+        } else {
+          setTimeout(function () {
+            revealOffer();
+          }, OFFER_DELAY_MS);
+        }
+      })();
+    </script>
+
+    <script>
+    let globalVideo;
+
+    function loadWistiaVideo() {
+      const videoContainer = document.getElementById("wistia-video");
+      videoContainer.innerHTML = "";
+
+      let videoId = window.matchMedia("(max-width: 800px)").matches ? "o5mmu8nypr" : "nqhwxejs2b";
+
+      const wistiaDiv = document.createElement("div");
+      wistiaDiv.className = `wistia_embed wistia_async_${videoId}`;
+      videoContainer.appendChild(wistiaDiv);
+
+      if (!window._wistiaInitialized) {
+        const wistiaScript = document.createElement("script");
+        wistiaScript.src = "https://fast.wistia.com/assets/external/E-v1.js";
+        wistiaScript.async = true;
+        document.head.appendChild(wistiaScript);
+        window._wistiaInitialized = true;
+      }
+
+      window._wq = window._wq || [];
+      _wq.push({
+        id: videoId,
+        options: {
+          videoFoam: false,
+        },
+        onReady: function (video) {
+          globalVideo = video;
+
+          video.bind("play", function () {
+            window.dispatchEvent(new Event("videoplay"));
+          });
+
+          video.bind("pause", function () {
+            window.dispatchEvent(new Event("videopause"));
+          });
+        },
+      });
+    }
+
+    loadWistiaVideo();
+  </script>
+  </div>
+
+
+  <script>
+(function () {
+  const currentParams = new URLSearchParams(window.location.search);
+  if (!currentParams.toString()) return;
+
+  document.querySelectorAll('a[href]').forEach(function (link) {
+    try {
+      const url = new URL(link.href, window.location.origin);
+
+      currentParams.forEach((value, key) => {
+        if (!url.searchParams.has(key)) {
+          url.searchParams.set(key, value);
+        }
+      });
+
+      link.href = url.toString();
+    } catch (e) {}
+  });
+})();
+</script>
+
+
+<script>
+  function acceptCheck() {
+    var agreeCheckbox = document.getElementById("agreeCheckbox");
+
+    if (agreeCheckbox.checked) {
+      return true;
+    } else {
+      alert("Please confirm that you understand this is a recurring subscription.");
+      return false;
+    }
+  }
+</script>
+
+</body>
+
+</html>

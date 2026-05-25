@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sex GOD Upsell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+
+.order-progress-wrap {
+  background: var(--site-red-dark);
+  padding: 10px 12px;
+  border-bottom: 2px solid rgba(255,255,255,.08);
+}
+
+.order-progress {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.order-step {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 6px 20px 6px 16px;
+  background: linear-gradient(180deg, #fff5f6, #f9e3e6);
+  color: #2b1b1e;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  border: 1px solid #e7bfc5;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%, 10px 50%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+}
+
+.order-step:first-child {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
+  padding-left: 18px;
+}
+
+/* COMPLETED STEP */
+.order-step.is-complete {
+  color: var(--site-red);
+  background: linear-gradient(180deg, #ffe5e8, #f8ccd2);
+  border-color: #e5aab3;
+}
+
+.order-step .step-icon,
+.order-step .step-number {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 900;
+  flex: 0 0 22px;
+  border: 2px solid rgba(0,0,0,.2);
+  background: #fff;
+  color: #111;
+}
+
+/* CHECK ICON */
+.order-step.is-complete .step-icon {
+  background: var(--site-red);
+  color: #fff;
+  border-color: var(--site-red-dark);
+}
+
+/* ACTIVE STEP */
+.order-step:not(.is-complete) {
+  background: linear-gradient(180deg, #ffffff, #f1f1f1);
+}
+
+.order-step .step-number {
+  background: #111;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .order-progress-wrap {
+    padding: 8px 8px;
+  }
+
+  .order-progress {
+    gap: 8px;
+  }
+
+  .order-step {
+    font-size: 12px;
+    padding: 6px 16px 6px 12px;
+  }
+
+  .order-step:first-child {
+    padding-left: 14px;
+  }
+}
+
+
+    :root {
+      --page-bg: #f6eeee;
+      --site-red: #a81422;
+      --site-red-dark: #7f101a;
+      --accent-red: #cf1f32;
+      --accent-red-dark: #9f1726;
+      --rose: #fff4f6;
+      --red: #c9192e;
+      --orange: #ffb300;
+      --gold: #d49b32;
+      --text: #1f1618;
+      --muted: #6d5a5f;
+      --card: #ffffff;
+      --line: #ead7db;
+      --soft: #fff8f8;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 14px;
+      --container: 920px;
+      --body-size: 18px;
+      --heading-font: Georgia, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: var(--page-bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: var(--body-size);
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      background: var(--site-red);
+      color: #fff;
+      padding: 10px 16px;
+      border-bottom: 4px solid var(--site-red-dark);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .topbar__inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .badge-strip {
+      background: #fff0f2;
+      color: var(--site-red-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 7px 12px;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+
+    .page {
+      max-width: var(--container);
+      margin: 0 auto;
+      background: transparent;
+    }
+
+    .content-shell {
+      background: #fdf8f8;
+      padding: 28px 16px 40px;
+    }
+
+    .hero {
+      background: #fff;
+      border-radius: 0 0 18px 18px;
+      padding: 34px 26px 26px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -160px;
+      bottom: -120px;
+      width: 520px;
+      height: 240px;
+      background: linear-gradient(135deg, rgba(201,25,46,.09), rgba(201,25,46,0));
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      text-align: center;
+      color: var(--site-red);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .headline {
+      font-family: var(--heading-font);
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.06;
+      text-align: center;
+      color: var(--red);
+      margin: 0 auto 14px;
+      max-width: 780px;
+      font-weight: 800;
+    }
+
+    .subheadline {
+      text-align: center;
+      max-width: 740px;
+      margin: 0 auto 24px;
+      font-size: 23px;
+      color: #302325;
+      font-weight: 800;
+    }
+
+    .hero-card {
+      max-width: 760px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #b41626, #8e1220);
+      border-radius: 18px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,255,255,.18), transparent 38%);
+      pointer-events: none;
+    }
+
+    .hero-card__title {
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.05;
+      font-weight: 900;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+    }
+
+    .hero-card__text {
+      font-size: 17px;
+      line-height: 1.65;
+      margin: 0 auto 18px;
+      max-width: 620px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-btn {
+      background: linear-gradient(180deg, #ffd85c, #ffb100);
+      color: #222;
+      font-weight: 900;
+      padding: 16px 28px;
+      border-radius: 999px;
+      box-shadow: 0 8px 18px rgba(0,0,0,.18);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      font-size: 15px;
+      min-width: 260px;
+    }
+
+    .cta-note {
+      font-size: 13px;
+      opacity: .95;
+      font-weight: 600;
+    }
+
+    .article {
+      background: #fff;
+      box-shadow: var(--shadow);
+      padding: 34px 28px;
+      margin-top: 26px;
+      border-radius: 18px;
+    }
+
+    .section {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section:first-child { border-top: 0; padding-top: 0; }
+
+    .section-title {
+      font-family: var(--heading-font);
+      color: var(--accent-red-dark);
+      font-weight: 800;
+      line-height: 1.15;
+      font-size: clamp(28px, 4vw, 42px);
+      margin: 0 0 18px;
+      text-align: center;
+    }
+
+    .byline {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #291d20;
+      font-weight: 500;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 18px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: start;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    p { margin: 0 0 16px; }
+    ul, ol { margin: 0 0 18px 22px; }
+    li { margin: 0 0 8px; }
+
+    .highlight-box {
+      background: #fff5f6;
+      border: 1px solid #f0c9d0;
+      border-left: 6px solid var(--accent-red);
+      border-radius: 12px;
+      padding: 18px 18px 16px;
+      margin: 20px 0;
+    }
+
+    .highlight-box strong {
+      color: var(--site-red-dark);
+    }
+
+    .quote-box {
+      background: linear-gradient(180deg, #fffafb, #fff3f5);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+      margin: 22px auto;
+      font-size: 19px;
+      font-weight: 600;
+      color: #46252d;
+      max-width: 760px;
+      text-align: center;
+    }
+
+    .product-break {
+      background: #fff4e5;
+      border: 2px solid #ffd575;
+      border-radius: 14px;
+      padding: 26px 22px;
+      margin: 30px auto;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,.06);
+      max-width: 760px;
+    }
+
+    .product-break__title {
+      color: var(--red);
+      font-size: clamp(24px, 3.2vw, 34px);
+      font-weight: 900;
+      line-height: 1.12;
+      margin-bottom: 10px;
+      font-family: var(--heading-font);
+    }
+
+    .product-break__text {
+      max-width: 640px;
+      margin: 0 auto 16px;
+    }
+
+    .offer-section {
+      margin-top: 28px;
+      background: transparent;
+    }
+
+    .offer-title {
+      text-align: center;
+      color: var(--site-red-dark);
+      font-family: var(--heading-font);
+      font-size: clamp(30px, 4vw, 44px);
+      margin: 0 0 20px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 2px solid #f1d9dd;
+      position: relative;
+      text-align: center;
+    }
+
+    .pricing-card.best {
+      transform: translateY(-8px);
+      border-color: #ef5050;
+      box-shadow: 0 18px 40px rgba(0,0,0,.12);
+    }
+
+    .pricing-top {
+      background: var(--accent-red);
+      color: #fff;
+      text-align: center;
+      padding: 12px 14px;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .pricing-card.best .pricing-top {
+      background: var(--site-red);
+    }
+
+    .pricing-body {
+      padding: 22px 16px 22px;
+      text-align: center;
+    }
+
+    .pricing-image {
+      width: 110px;
+      height: 110px;
+      border-radius: 999px;
+      background: #fff2f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      color: var(--site-red);
+      font-size: 34px;
+      font-weight: 900;
+      border: 2px solid #f4d5db;
+    }
+
+    .old-price {
+      color: #7b8489;
+      text-decoration: line-through;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .new-price {
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 900;
+      color: #162126;
+      margin-bottom: 8px;
+    }
+
+    .per-unit {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .save-pill {
+      display: inline-block;
+      background: #e63946;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      padding: 7px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .pricing-list {
+      list-style: none;
+      margin: 0 0 16px;
+      padding: 0;
+      text-align: left;
+      font-size: 15px;
+      color: #243036;
+    }
+
+    .pricing-list li {
+      padding-left: 22px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .pricing-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--site-red);
+      font-weight: 900;
+    }
+
+    .buy-btn {
+      width: 100%;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffd85c, #ffb100);
+      color: #222;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 15px 16px;
+      cursor: pointer;
+      box-shadow: 0 10px 18px rgba(0,0,0,.14);
+    }
+
+    .guarantee {
+      background: #fff;
+      margin-top: 34px;
+      border: 3px solid #d39d2c;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+      text-align: center;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .guarantee__seal {
+      width: 88px;
+      height: 88px;
+      margin: -58px auto 12px;
+      background: radial-gradient(circle at 30% 30%, #f4d787, #c88a1d);
+      border-radius: 50%;
+      border: 6px solid #fff;
+      box-shadow: 0 10px 20px rgba(0,0,0,.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a2b00;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .guarantee h2 {
+      font-family: var(--heading-font);
+      color: var(--red);
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+    }
+
+    .testimonials {
+      margin-top: 34px;
+      background: #f8ecee;
+      border-radius: 18px;
+      padding: 30px 20px;
+    }
+
+    .testimonials__title {
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto 16px;
+      font-family: var(--heading-font);
+      font-size: clamp(30px, 4vw, 42px);
+      color: var(--site-red-dark);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.08);
+      text-align: left;
+    }
+
+    .review-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex: 0 0 auto;
+      background: #ffd9df;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      color: var(--site-red);
+    }
+
+    .review-name {
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .review-meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .stars {
+      color: #f5a623;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .bonus {
+      background: #fff;
+      margin-top: 30px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bonus-top {
+      background: linear-gradient(90deg, #ef6b2e, #dd3b34);
+      color: #fff;
+      padding: 14px 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: 14px;
+      text-align:center;
+    }
+
+    .bonus-body {
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items: center;
+      text-align:center;
+    }
+
+    .bonus h3 {
+      margin: 0 0 10px;
+      color: var(--accent-red-dark);
+      font-size: clamp(26px, 3.2vw, 36px);
+      line-height: 1.12;
+      font-family: var(--heading-font);
+    }
+
+    .footer {
+      background: var(--site-red-dark);
+      color: rgba(255,255,255,.82);
+      padding: 24px 20px 36px;
+      margin-top: 34px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer__inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .small-note {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .reviews-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-card.best {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .content-shell { padding: 18px 10px 26px; }
+      .hero { padding: 22px 14px 18px; }
+      .article { padding: 22px 16px; }
+      .testimonials { padding: 22px 12px; }
+      .guarantee { padding: 22px 16px; }
+      .headline { font-size: 34px; }
+      .subheadline { font-size: 17px; }
+      .section-title { font-size: 29px; }
+      .hero-card__title { font-size: 28px; }
+      .new-price { font-size: 36px; }
+      .cta-btn, .buy-btn { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+ <div class="order-progress-wrap">
+  <div class="order-progress">
+    <div class="order-step is-complete">
+      <span class="step-icon">✓</span>
+      <span>Order Placed</span>
+    </div>
+    <div class="order-step">
+      <span class="step-number">2</span>
+      <span>Customize Order</span>
+    </div>
+  </div>
+</div>
+
+  <div class="badge-strip"> WAIT! Your order is not yet complete</div>
+
+  <main class="page">
+    <div class="content-shell">
+      <section class="hero">
+        <h1 class="headline">"The Best She's Ever Had!"</h1>
+        <p class="subheadline">How to Have Mind-Blowing Sex That <br> Leaves Her BEGGING For More... <br> (Even If You're A Virgin...)</p>
+
+        <div class="hero-card">
+          <div>
+            <h2 class="hero-card__title">Sex GOD</h2>
+            <div class="hero-card__text">
+              Inside this upgrade, you’ll learn how to control the emotional and physical experience from start to finish. 
+              Not with random tricks. Not with gimmicks. 
+              But with a step-by-step system built around tension, pacing, psychology, and conditioning.
+              <br><br>
+              This is the deeper layer most men never understand.
+              Once you do, everything changes.
+            </div>
+            <div class="cta-row">
+              <a href="#" class="cta-btn">Add Sex GOD To My Order</a>
+              <div class="cta-note">One-time offer • Instant digital access • You can edit all text later</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article class="article">
+        <section class="section">
+          <h2 class="section-title">The Core Mechanism — Conditioning Her To Associate You With Pleasure</h2>
+          <div class="byline">This is the foundation the entire program is built on.</div>
+          <div class="content-grid">
+            <div>
+              <p class="lead">If you do not understand this principle, nothing else you do will stick for long.</p>
+              <p>Most men think being unforgettable is about techniques, positions, or trying to copy something they heard online. That is surface-level thinking. Real impact comes from association.</p>
+              <p>When a woman repeatedly experiences anticipation, tension, release, and emotional intensity with you, her mind starts linking you to that feeling automatically. You stop being “some guy she hooked up with” and start becoming the man she remembers.</p>
+              <p>That is what Sex GOD is really about. Not performance for the sake of ego. Not overcompensation. Not fake confidence. It is about creating a repeatable experience that leaves a mark.</p>
+              <div class="highlight-box"><strong>What matters most:</strong> the brain remembers emotional spikes, contrast, timing, and how you made someone feel. This course teaches you how to control those elements on purpose.</div>
+              <p>Once that association forms, the dynamic changes. She becomes more engaged, more responsive, and more emotionally invested in being around you because your presence starts to predict pleasure in her mind.</p>
+              <ul>
+                <li>She remembers the tension before anything even happened</li>
+                <li>She feels the difference between you and every average man before you</li>
+                <li>She begins to associate your presence with anticipation, excitement, and release</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Why Most Men Fail — They Focus On Action Instead Of Experience</h2>
+          <p>Most guys are chasing isolated actions. They focus on what move to make, what to say next, or how to “perform better” in the moment. But women do not remember isolated actions the way men think they do. They remember the overall emotional experience.</p>
+          <p>If the energy is flat, if the pacing is off, if the tension dies, or if the experience feels mechanical, it does not matter how much effort a man puts in. The memory will be weak. The pull will be weak. The attachment will be weak.</p>
+          <div class="quote-box">She does not remember what you tried to do. She remembers what she felt around you.</div>
+          <p>Sex GOD teaches you how to shape the full experience so the interaction has emotional momentum from start to finish. Instead of hoping things click, you start understanding what creates intensity, what builds anticipation, and what makes her lock into the moment.</p>
+          <div class="content-grid">
+            <div>
+              <p>That means learning how to lead the emotional frame, how to avoid killing momentum, and how to keep her in a state where the interaction feels progressively stronger rather than flatter over time.</p>
+              <p>This is what separates average men from men women obsess over later. The average man reacts. The unforgettable man controls the experience.</p>
+              <ol>
+                <li>He creates anticipation before escalation</li>
+                <li>He controls the pacing instead of rushing</li>
+                <li>He understands that emotional contrast makes desire stronger</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">What You’ll Learn Inside Sex GOD</h2>
+          <p>You are not getting vague dating advice here. You are getting a structured system that explains how to create stronger attraction, deeper tension, and more memorable experiences with intention.</p>
+          <p>Inside the program, you can later swap, edit, expand, or tighten any section — but the framework is already laid out for you now so the page feels complete and ready to use.</p>
+          <p>These modules are designed to help a man become more controlled, more intentional, and more psychologically effective in how he leads attraction.</p>
+          <div class="highlight-box"><strong>Inside this upgrade, you’ll cover:</strong> attraction pacing, tension building, emotional contrast, frame control, confidence under pressure, and how to create the kind of sexual presence that stays in her mind long after the moment ends.</div>
+          <p>In simple terms, this shows you how to stop being forgettable and start becoming the man who leaves an imprint.</p>
+        </section>
+
+        <div class="product-break">
+          <div class="product-break__title">This Is The Upgrade That Turns Surface-Level Attraction Into Real Obsession</div>
+          <div class="product-break__text">You already have the front-end training. Sex GOD gives you the advanced layer — the psychology, control, and pacing that make the entire experience stronger, deeper, and far more memorable.</div>
+          <a class="cta-btn" href="#">Yes — Unlock Sex GOD Now</a>
+          <div class="small-note">One click. Instant access. You can customize all copy later.</div>
+        </div>
+
+        <section class="section">
+          <h2 class="section-title">The Real Shift — From Hoping To Knowing</h2>
+          <p>When a man does not understand attraction deeply, every interaction feels uncertain. He second-guesses. He reacts. He loses composure when he feels pressure. He hopes it works.</p>
+          <p>When a man understands the mechanics, everything starts to feel different. He slows down. He becomes deliberate. He stops chasing approval and starts controlling the rhythm of the interaction.</p>
+          <p>That shift alone changes how a woman responds. Confidence is not just what you say. It is the emotional stability she feels from you when things get intense.</p>
+          <ul>
+            <li>You stop overthinking every moment</li>
+            <li>You start controlling pace and emotional momentum</li>
+            <li>You become more grounded, more dangerous, and more memorable</li>
+            <li>You build the kind of presence she feels before you even touch her</li>
+          </ul>
+          <p>That is why this course matters. It is not about random tricks. It is about becoming the kind of man who naturally creates a stronger response.</p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Why Add This Right Now</h2>
+          <p>This upgrade fits perfectly with the rest of your offer because it takes the attraction conversation to the next level. Instead of just helping a man get in the door, it shows him how to become unforgettable once he is there.</p>
+          <p>That makes it the logical next step. It is specific. It is desirable. And it speaks directly to the deeper outcome most men really want — not just getting attention, but creating a lasting effect.</p>
+          <div class="quote-box">She can meet a hundred men. Very few of them make her feel something she keeps thinking about later.</div>
+          <p>Sex GOD is about becoming one of those few. And because this is a one-time offer, the easiest time to add it is right now while everything is already in motion.</p>
+        </section>
+      </article>
+
+      <section class="offer-section">
+        <h2 class="offer-title">Choose Your Access Option</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-top">Basic Access</div>
+            <div class="pricing-body">
+              <div class="pricing-image">S</div>
+              <div class="old-price">$97</div>
+              <div class="new-price">$47</div>
+              <div class="per-unit">Instant digital access</div>
+              <div class="save-pill">Save 50%</div>
+              <ul class="pricing-list">
+                <li>Core Sex GOD training</li>
+                <li>Editable page copy framework</li>
+                <li>Immediate access after purchase</li>
+              </ul>
+              <a href="#"><button class="buy-btn">Add To My Order</button></a>
+            </div>
+          </div>
+
+          <div class="pricing-card best">
+            <div class="pricing-top">Most Popular</div>
+            <div class="pricing-body">
+              <div class="pricing-image">SG</div>
+              <div class="old-price">$197</div>
+              <div class="new-price">$67</div>
+              <div class="per-unit">Best value upgrade</div>
+              <div class="save-pill">Today Only</div>
+              <ul class="pricing-list">
+                <li>Full Sex GOD system</li>
+                <li>Attraction and conditioning framework</li>
+                <li>Advanced pacing and tension modules</li>
+                <li>One-time upsell pricing</li>
+              </ul>
+              <a href="#"><button class="buy-btn">Unlock Everything Now</button></a>
+            </div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-top">VIP Access</div>
+            <div class="pricing-body">
+              <div class="pricing-image">VIP</div>
+              <div class="old-price">$297</div>
+              <div class="new-price">$97</div>
+              <div class="per-unit">Premium access tier</div>
+              <div class="save-pill">Highest Level</div>
+              <ul class="pricing-list">
+                <li>Everything in full system</li>
+                <li>Expanded implementation notes</li>
+                <li>Best for premium positioning</li>
+              </ul>
+              <a href="#"><button class="buy-btn">Get VIP Access</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2 class="testimonials__title">What This Upgrade Helps You Become</h2>
+        <div class="reviews-grid">
+          <div class="review">
+            <div class="review-head">
+              <div class="avatar">J</div>
+              <div>
+                <div class="review-name">James R.</div>
+                <div class="review-meta">Confidence Upgrade</div>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>This gave me a cleaner framework for what to focus on. I stopped trying to force things and started paying attention to pacing, tension, and control.</p>
+          </div>
+
+          <div class="review">
+            <div class="review-head">
+              <div class="avatar">M</div>
+              <div>
+                <div class="review-name">Marcus T.</div>
+                <div class="review-meta">Better Presence</div>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>The biggest shift was realizing attraction is an experience, not a performance. That alone changed how I carried myself.</p>
+          </div>
+
+          <div class="review">
+            <div class="review-head">
+              <div class="avatar">D</div>
+              <div>
+                <div class="review-name">David L.</div>
+                <div class="review-meta">More Control</div>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>The structure here is strong. It helped me understand where most men lose momentum and how to hold frame through the entire interaction.</p>
+          </div>
+
+          <div class="review">
+            <div class="review-head">
+              <div class="avatar">C</div>
+              <div>
+                <div class="review-name">Chris W.</div>
+                <div class="review-meta">Deeper Attraction</div>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>I liked that this was not random advice. It felt like a system. Everything built on the next thing and made the whole interaction stronger.</p>
+          </div>
+
+          <div class="review">
+            <div class="review-head">
+              <div class="avatar">A</div>
+              <div>
+                <div class="review-name">Alex P.</div>
+                <div class="review-meta">Practical Framework</div>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>This made me think differently. Less about doing more, more about leading better. The difference that creates is huge.</p>
+          </div>
+
+          <div class="review">
+            <div class="review-head">
+              <div class="avatar">N</div>
+              <div>
+                <div class="review-name">Nick S.</div>
+                <div class="review-meta">High Value Add-On</div>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>As an upsell page this is strong because it speaks to what men actually want — not just attention, but unforgettable impact.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bonus">
+        <div class="bonus-top">Included Bonus Framework</div>
+        <div class="bonus-body">
+          <div>
+            <h3>The Unforgettable Presence Checklist</h3>
+            <p>This bonus section gives you a simple way to reinforce the key ideas behind the main program: pacing, emotional control, tension, contrast, and leadership.</p>
+            <p>It also makes the offer feel more complete and gives you another editable content block you can customize later.</p>
+            <ul>
+              <li>Quick-reference attraction reminders</li>
+              <li>Confidence and frame cues</li>
+              <li>High-value positioning notes</li>
+            </ul>
+            <a class="cta-btn" href="#">Claim The Full Upgrade</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="guarantee">
+        <div class="guarantee__seal">30 Day Guarantee</div>
+        <h2>Try It Risk-Free</h2>
+        <p>If you want a cleaner, stronger, and more premium upsell page for Sex GOD, this gives you the full structure right now. You can edit the wording, tweak the angle, and tailor the positioning however you want later.</p>
+        <p>For now, the heavy lifting is done — the page is centered, spaced properly, and filled with complete copy so you are not starting from a blank screen.</p>
+      </section>
+
+      <section class="offer-section">
+        <h2 class="offer-title">Add Sex GOD Before This Page Closes</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-top">Starter</div>
+            <div class="pricing-body">
+              <div class="pricing-image">S</div>
+              <div class="old-price">$97</div>
+              <div class="new-price">$47</div>
+              <div class="per-unit">One-time payment</div>
+              <div class="save-pill">Entry Offer</div>
+              <a href="#"><button class="buy-btn">Yes, Add It</button></a>
+            </div>
+          </div>
+
+          <div class="pricing-card best">
+            <div class="pricing-top">Recommended</div>
+            <div class="pricing-body">
+              <div class="pricing-image">SG</div>
+              <div class="old-price">$197</div>
+              <div class="new-price">$67</div>
+              <div class="per-unit">Best converting option</div>
+              <div class="save-pill">Best Deal</div>
+              <a href="#"><button class="buy-btn">Give Me Full Access</button></a>
+            </div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-top">Premium</div>
+            <div class="pricing-body">
+              <div class="pricing-image">VIP</div>
+              <div class="old-price">$297</div>
+              <div class="new-price">$97</div>
+              <div class="per-unit">Highest tier option</div>
+              <div class="save-pill">Premium</div>
+              <a href="#"><button class="buy-btn">Upgrade Me Now</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>Sex GOD Digital Course</p>
+      <p>Replace this footer with your real company details later.</p>
+      <p>Copyright © 2026. All rights reserved.</p>
+      <p>This page contains promotional and educational content. Individual results and experiences will vary.</p>
+      <p>Add your disclaimer, terms, refund policy, and support details here.</p>
+    </div>
+  </footer>
+</body>
+</html>

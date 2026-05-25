@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="canonical" href="/venus-code/cb-sexgott" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sex God – Intimacy Upgrade for Men</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/images/apple-touch-icon.png"
+    />
+
+    <style>
+      /* ===== Base ===== */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: #050815;
+        color: #f9fafb;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      /* ===== Layout ===== */
+      .page-wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 16px 40px;
+      }
+
+      @media (min-width: 768px) {
+        .main-container {
+          padding: 40px 24px 60px;
+        }
+      }
+
+      /* ===== Header Bar ===== */
+      .header-bar {
+        width: 100%;
+        background: linear-gradient(90deg, #7f1d1d, #dc2626, #7f1d1d);
+        color: #f9fafb;
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      /* ===== Typography Blocks ===== */
+      .main-headline {
+        font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+        font-weight: 700;
+        text-align: center;
+        margin: 24px auto 12px;
+        color: #f9fafb;
+        line-height: 1.15;
+      }
+
+      .main-headline .underline {
+        border-bottom: 3px solid #f97373;
+        padding-bottom: 4px;
+      }
+
+      .intro-text {
+        text-align: center;
+        font-size: 0.95rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #fca5a5;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .body-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #e5e7eb;
+      }
+
+      .body-text p {
+        margin-bottom: 14px;
+      }
+
+      /* ===== Card Styles ===== */
+      .card-main {
+        background: #0b0f1e;
+        border-radius: 18px;
+        padding: 24px 18px 26px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
+        border: 1px solid #111827;
+      }
+
+      @media (min-width: 768px) {
+        .card-main {
+          padding: 28px 26px 30px;
+        }
+      }
+
+      /* Product Image */
+      .product-wrapper {
+        margin: 26px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .product-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+        border: 1px solid #1f2937;
+      }
+
+      /* ===== Summary Box ===== */
+      .summary-box {
+        margin: 18px 0 22px;
+        padding: 14px 14px 12px;
+        border-radius: 14px;
+        background: radial-gradient(circle at top left, rgba(248, 113, 113, 0.18), #020617);
+        border: 1px solid rgba(248, 113, 113, 0.5);
+      }
+
+      .summary-box-title {
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #fecaca;
+      }
+
+      .summary-box ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 0.9rem;
+      }
+
+      .summary-box li {
+        margin-bottom: 4px;
+      }
+
+      /* ===== Guarantee ===== */
+      .guarantee-section {
+        margin-top: 28px;
+        padding: 18px 16px;
+        border-radius: 16px;
+        background: linear-gradient(
+          135deg,
+          rgba(248, 113, 113, 0.18),
+          rgba(153, 27, 27, 0.9)
+        );
+        border: 1px solid rgba(252, 165, 165, 0.5);
+      }
+
+      .guarantee-title {
+        font-size: 1.05rem;
+        text-align: center;
+        margin: 0;
+        color: #fef2f2;
+      }
+
+      /* ===== CTA Button ===== */
+      .cta-wrapper {
+        margin: 26px 0 8px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        border-radius: 999px;
+        overflow: hidden;
+        background: linear-gradient(90deg, #fecaca, #ef4444);
+        box-shadow: 0 20px 55px rgba(248, 113, 113, 0.85);
+      }
+
+      .cta-main-text {
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 12px 10px 4px;
+        color: #111827;
+      }
+
+      .cta-price-text {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0 10px 10px;
+        color: #111827;
+        font-weight: 600;
+      }
+
+      .cta-button:hover {
+        filter: brightness(1.05);
+        transform: translateY(-1px);
+        box-shadow: 0 24px 60px rgba(248, 113, 113, 0.95);
+      }
+
+      .cta-button:active {
+        transform: translateY(0);
+        box-shadow: 0 18px 45px rgba(248, 113, 113, 0.8);
+      }
+
+      /* ===== FAQ ===== */
+      .faq-block {
+        margin-top: 56px;
+        margin-bottom: 40px;
+      }
+
+      .faq-title {
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 22px;
+        color: #f9fafb;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      @media (min-width: 900px) {
+        .faq-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 22px;
+        }
+      }
+
+      .faq-column {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .faq-item {
+        background: #020617;
+        border-radius: 14px;
+        padding: 12px 12px 10px;
+        border: 1px solid #7f1d1d;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.9);
+      }
+
+      .faq-question h3 {
+        font-size: 0.95rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .question-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        border-radius: 999px;
+        border: 2px solid #f97373;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #f97373;
+      }
+
+      .faq-answer {
+        margin-top: 8px;
+      }
+
+      .faq-answer p {
+        margin: 0;
+        font-size: 0.82rem;
+        line-height: 1.6;
+        color: #e5e7eb;
+      }
+
+      /* ===== Footer ===== */
+      .footer-section {
+        margin-top: auto;
+        background: #020617;
+        border-top: 1px solid #111827;
+        color: #d1d5db;
+        padding: 18px 16px 26px;
+      }
+
+      .footer-content {
+        max-width: 960px;
+        margin: 0 auto;
+        font-size: 0.78rem;
+        line-height: 1.6;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+
+      .footer-link {
+        text-decoration: none;
+        color: #fecaca;
+        font-weight: 500;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer-disclaimer p {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <div class="header-bar">HK Ultra – Sex God Upgrade</div>
+
+      <main class="main-container">
+        <div class="card-main">
+          <h1 class="main-headline">
+            Become a
+            <span class="underline">Sex God</span>
+            – through presence, respect & genuine connection
+          </h1>
+
+          <p class="intro-text">Advanced intimacy upgrade only for HK Ultra members</p>
+
+          <div class="body-text">
+            <div class="summary-box">
+              <div class="summary-box-title">Short Summary of the Sex God Upgrade</div>
+              <ul>
+                <li><strong>No macho posturing, no misogyny</strong> – focus on empathy, respect, and consent.</li>
+                <li>Learn how to be <strong>clear, attentive, and present</strong> in bed – instead of tense or insecure.</li>
+                <li>Strong focus on <strong>communication, feedback & emotional closeness</strong> instead of flat "techniques."</li>
+                <li>Ideal for men who want to experience intimacy in a more mature, conscious, and responsible way.</li>
+              </ul>
+            </div>
+
+            <p>
+              With <strong>HK Ultra</strong> and – if you've already activated it – the 
+              <strong>SM Upgrade</strong>, you are building a strong foundation: your presence, 
+              your inner posture, and your communication are becoming clearer, more sovereign, 
+              and more respectful.
+            </p>
+
+            <p>
+              However, one area remains uncomfortable for many men: the topic of 
+              <strong>intimacy in the bedroom</strong>. Most never speak openly about it, 
+              hold outdated ideas in their heads, or are afraid of doing something "wrong." 
+              At the same time, extreme images, expectations, and myths are spread from all sides, 
+              having little to do with real closeness.
+            </p>
+
+            <p>
+              This is exactly where <strong>Sex God</strong> comes in: 
+              an advanced intimacy upgrade that shows you how to become 
+              <strong>emotionally present, empathetic, and self-confident</strong> when it 
+              comes to closeness and sexuality – without pressure, without games, and without intrusive behavior.
+            </p>
+
+            <div class="product-wrapper">
+              <img
+                src="/images/sexgod.webp"
+                alt="Sex God – Intimacy Upgrade"
+                class="product-image"
+              />
+            </div>
+
+            <p>
+              Instead of promising you "tricks," Sex God concentrates on what 
+              truly makes intimacy powerful:
+            </p>
+
+            <p>
+              – conscious, clear communication about desires and boundaries<br />
+              – the ability to listen and perceive non-verbal signals<br />
+              – a relaxed, safe atmosphere where both feel comfortable<br />
+              – letting go of perfectionism, performance pressure, and comparisons
+            </p>
+
+            <p>
+              You will learn how to:
+            </p>
+
+            <p>
+              – talk to a partner respectfully about closeness without it being awkward<br />
+              – handle nervousness and pressure instead of being secretly ashamed<br />
+              – build genuine connection so that intimacy doesn't feel like a competition, 
+                but like a shared, voluntary space<br />
+              – find your own pace while simultaneously paying attention to hers
+            </p>
+
+            <p>
+              Sex God is aimed at men who:
+              <br />– consciously want <strong>no part of a toxic, misogynistic "dating market"</strong>
+              <br />– see intimacy as something sacred and beautiful – not as a "scorecard"
+              <br />– want to take responsibility for their energy, their communication, and their influence 
+                  on others
+            </p>
+
+            <p>
+              We have already prepared the Sex God upgrade in your member area. 
+              If you decide now, it will be activated and you will gain access to:
+            </p>
+
+            <p>
+              – a clearly structured <strong>Sex God Roadmap</strong> for more mature, relaxed intimacy<br />
+              – concrete conversation examples on how to address desires and boundaries<br />
+              – reflection exercises to help you let go of old patterns, shame, and performance pressure<br />
+              – impulses on how to place safety, trust, and mutual respect at the center
+            </p>
+
+            <p>
+              Important: Sex God is <strong>not an explicit "technique course"</strong> and does 
+              not replace professional counseling. It is not about persuading or 
+              manipulating anyone, but about how you, as a man, handle intimacy in a more mature, 
+              respectful, and present way – always based on 
+              <strong>clear consent</strong>.
+            </p>
+
+            <p>
+              Because this upgrade is very personal and we regularly add new content, examples, 
+              and impulses, we only offer Sex God to a small portion of 
+              HK Ultra members. If you see this page, you are part of this 
+              selected group.
+            </p>
+
+            <p>
+              If you feel that you no longer want to let dubious "gurus" and 
+              misogynistic ideologies define intimacy, but want to go your own conscious 
+              and responsible way as a man, then 
+              <strong>Sex God</strong> is the appropriate next upgrade.
+            </p>
+
+            <div class="guarantee-section">
+              <h2 class="guarantee-title">
+                Your upgrade is protected by our 60-day money-back guarantee – 
+                test Sex God in peace and then decide if it suits you.
+              </h2>
+            </div>
+
+            <div class="cta-wrapper">
+              <a
+                href="https://hkultra.pay.clickbank.net/?cbitems=4&cbfid=63225&template=emmatimer"
+                class="cta-button no-underline"
+              >
+                <div class="cta-main-text">Yes, I want to activate the Sex God upgrade</div>
+                <div class="cta-price-text">
+                  One-time activation fee of only $147
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+                   <div class="mb-16 flex items-center justify-center underline">
+      <a href="https://hkultra.pay.clickbank.net/?cbur=d&cbitems=4">
+        No Thank You, I don't want this right now
+      </a>
+    </div>
+  </div>
+        <section class="faq-block">
+          <h2 class="faq-title">Frequently Asked Questions (FAQs)</h2>
+
+          <div class="faq-grid">
+            <div class="faq-column">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Isn't Sex God a bit of an exaggerated name?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    The name was chosen to be intentionally provocative – the content is not. 
+                    Sex God stands for conscious, responsible, and empathetic 
+                    masculinity in the field of intimacy. It's not about being "better" than others, 
+                    but about being more mature, present, and respectful.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Is the program vulgar or explicit?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    No. We speak openly about intimacy, but at a respectful, 
+                    adult level. The focus is on communication, presence, emotions, 
+                    and boundaries – not on detailed descriptions or voyeuristic 
+                    content.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Can I use Sex God if I'm currently single?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Yes. While much of the content refers to situations with a partner, 
+                     the inner work, communication, and posture are just as important 
+                    before you enter a relationship. You are consciously preparing for future 
+                    encounters.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-column">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Is Sex God intended for couples or only for men?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    The program is primarily aimed at men. However, you can reflect on or 
+                    discuss much of the content together with a partner. 
+                    The goal is always a respectful, consensual dynamic – never 
+                    one-sided control.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    What if I don't get along with the content?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    That's why there is a 60-day money-back guarantee. If you notice that the 
+                    program doesn't suit you, you can request a 
+                    refund within 60 days. We want to support men who are ready to 
+                    honestly develop themselves – not "hold on" to anyone.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Do I need HK Ultra or SM first?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    HK Ultra is the foundation. SM – Sovereign Masculinity – deepens your 
+                    presence and communication. Sex God ideally builds on that. 
+                    If you jumped straight in here, you can still use it, 
+                    but you should be ready to also work on your inner posture – 
+                    not just the topic of intimacy.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-column">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    Does Sex God change my values or my personality?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    You remain yourself. The goal is not to turn you into someone you 
+                    are not, but to strengthen the best, most mature parts of you: 
+                    honesty, sense of responsibility, empathy, and presence. How you live these 
+                    qualities is ultimately decided by you – not by us.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    <span class="question-icon">?</span>
+                    What results can I expect?
+                  </h3>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Specific results are individual. What you can expect: a significantly 
+                    better understanding of your own needs and boundaries, more 
+                    inner peace regarding the topic of intimacy, and clearer, more respectful communication 
+                    with (future) partners. How much your life changes as a result 
+                    depends on how honestly and consistently you implement the content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-section">
+        <div class="footer-content">
+          <p
+            style="
+              text-align: center;
+              font-size: 0.75rem;
+              color: #ffffff;
+              line-height: 1.5;
+              margin-top: 0.875rem;
+              margin-bottom: 1.5rem;
+            "
+          >
+            All sales are final 24 hours after purchase.<br />
+            This ensures rapid delivery, fair access, and protection against digital 
+            abuse.
+          </p>
+
+          <div class="footer-links">
+            <a href="/privacy-policy/" class="footer-link"
+              >Privacy Policy &amp; Terms of Use</a
+            >
+            <a href="mailto:team@getpegasusoriginal.com" class="footer-link"
+              >Contact Us</a
+            >
+          </div>
+
+          <div class="footer-disclaimer">
+            <p>
+              NOTE: Individual results may vary. The experiences and examples described 
+              are for illustrative purposes only. We do not claim 
+              that you will achieve the same results. Your results depend on 
+              many factors, including – but not limited to – your 
+              personality, your communication, your experience, and your willingness to 
+              actually implement what you've learned. Every form of personal development 
+              requires commitment, honesty with yourself, and consistent action. If you 
+              are not ready to take responsibility for your own results, 
+              you should not book this training.
+            </p>
+            <p>
+              This website and the products and services offered are not 
+              affiliated with Instagram, Meta, or any other social network and 
+              are neither sponsored, endorsed, nor reviewed by them.
+            </p>
+            <p>
+              ClickBank® is a registered trademark of Click Sales, Inc., a corporation 
+              under the laws of the US state of Delaware with its registered office at 1444 S. Entertainment 
+              Ave., Suite 410, Boise, ID 83709, USA and is used with permission. The 
+              role of ClickBank as a retailer does not constitute an endorsement, recommendation, or 
+              review of these products and does not mean any commitment regarding claims, 
+              statements, or opinions made in connection with these products.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/cb/page-loader.js"></script>
+  </body>
+</html>
