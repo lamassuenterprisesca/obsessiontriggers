@@ -101,10 +101,8 @@
   function getAggressiveContentPath() {
     const pathname = window.location.pathname;
 
-    // If user is on compliant page and rd=vdrd/indexb exists,
-    // send them back to aggressive page.
-    if (pathname === '/triggers-c/' || pathname === '/triggers-c/index.html') {
-      return '/triggers.html';
+    if (pathname.endsWith('/triggers-c/') || pathname.endsWith('/triggers-c/index.html')) {
+      return pathname.replace(/\/triggers-c\/?(index\.html)?$/, '/triggers.html');
     }
 
     return null;
@@ -113,14 +111,8 @@
   function getCompliantContentPath() {
     const pathname = window.location.pathname;
 
-    // If user is on aggressive triggers page without rd=vdrd/indexb,
-    // send them to compliant page.
-    if (
-      pathname === '/triggers.html' ||
-      pathname === '/triggers/' ||
-      pathname === '/triggers/index.html'
-    ) {
-      return '/triggers-c/index.html';
+    if (pathname.endsWith('/triggers.html')) {
+      return pathname.replace(/\/triggers\.html$/, '/triggers-c/index.html');
     }
 
     return null;
