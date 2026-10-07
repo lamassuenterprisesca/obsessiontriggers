@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Continue Below</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 18px;
+    }
+
+    .bridge {
+      width: 100%;
+      max-width: 750px;
+      text-align: center;
+    }
+
+    .authority-headline {
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.08;
+      font-weight: 800;
+      margin-bottom: 28px;
+      letter-spacing: -1px;
+    }
+
+    .image-link {
+      display: block;
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .bridge-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: 700;
+      padding: 18px 42px;
+      border-radius: 8px;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .cta-button:hover {
+      background: #15803d;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 15px;
+      }
+
+      .authority-headline {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        font-size: 34px;
+        margin-bottom: 22px;
+      }
+
+      .image-link {
+        margin-bottom: 24px;
+      }
+
+      .cta-button {
+        width: 100%;
+        font-size: 20px;
+        padding: 18px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="bridge">
+
+    <div class="authority-headline">
+      Before it gets BANNED:
+    </div>
+
+    <h1>
+      How to Make Any Baddie Want to Shower In Your Juices Regardless If You're 30, 40, 50, or Older
+    </h1>
+
+    <!-- CLICKABLE IMAGE -->
+    <a
+      href="https://www.gqnnl2trk.com/KZDWFR/363TCP/?uid=191"
+      class="image-link"
+    >
+      <img
+        src="https://obsessioncodes.com/images/stealth1.png"
+        alt=""
+        class="bridge-image"
+      />
+    </a>
+
+    <!-- CTA -->
+    <a
+      href="https://www.gqnnl2trk.com/KZDWFR/363TCP/?uid=191"
+      class="cta-button"
+    >
+      Watch The Video Now →
+    </a>
+
+  </main>
+
+  <!--
+    sub2 tracking: email links arrive as /lander/stealth?sub2=07oct26e1
+    and every offer link on the page gets that sub2 appended.
+    Each tab keeps the sub2 it was opened with. Leave sub2 OFF the hrefs above.
+  -->
+  <script>
+  (function () {
+    var FALLBACK = 'nosub';
+    var MAXAGE = 60 * 60 * 24 * 7; // 7 days
+    var OFFER_LINKS = 'a.image-link, a.cta-button';
+
+    function clean(v) {
+      return v && /^[A-Za-z0-9_-]{1,64}$/.test(v) ? v : null;
+    }
+    function cookieSub2() {
+      var m = document.cookie.match(/(?:^|;\s*)sub2=([^;]*)/);
+      return m ? clean(decodeURIComponent(m[1])) : null;
+    }
+
+    var urlSub2 = clean(new URLSearchParams(location.search).get('sub2'));
+
+    // Remember the last email actually clicked, for later visits that arrive
+    // with no sub2 (bookmark, typed URL). Reloads and back/forward don't count.
+    var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+    var isFreshClick = !nav || nav.type === 'navigate';
+
+    if (urlSub2 && isFreshClick) {
+      document.cookie = 'sub2=' + urlSub2 + ';path=/;max-age=' + MAXAGE + ';SameSite=Lax';
+    }
+
+    // The sub2 in this tab's URL always wins, so a tab opened from email 1
+    // keeps sending email 1's ID even after email 2 is opened in another tab.
+    var sub2 = urlSub2 || cookieSub2() || FALLBACK;
+
+    function stampAll() {
+      var links = document.querySelectorAll(OFFER_LINKS);
+      for (var i = 0; i < links.length; i++) {
+        var u = new URL(links[i].href, location.href);
+        u.searchParams.set('sub2', sub2);
+        links[i].href = u.toString();
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', stampAll);
+    } else {
+      stampAll();
+    }
+  })();
+  </script>
+
+</body>
+</html>
